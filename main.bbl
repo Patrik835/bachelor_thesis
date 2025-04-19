@@ -1,0 +1,95 @@
+\begin{thebibliography}{10}
+
+\bibitem{vaswani2017attention}
+A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
+  �.~Kaiser, and I.~Polosukhin, ``Attention is all you need,'' in {\em Advances
+  in neural information processing systems}, 2017.
+
+\bibitem{lewis2020retrieval}
+P.~Lewis, E.~Perez, A.~Piktus, F.~Petroni, V.~Karpukhin, N.~Goyal, H.~Küttler,
+  M.~Lewis, W.-t. Yih, T.~Rocktäschel, S.~Riedel, and D.~Kiela,
+  ``Retrieval-augmented generation for knowledge-intensive {NLP} tasks,'' {\em
+  Advances in Neural Information Processing Systems}, vol.~33, 2020.
+
+\bibitem{radford2018improving}
+A.~Radford, K.~Narasimhan, T.~Salimans, and I.~Sutskever, ``Improving language
+  understanding by generative pre-training,'' {\em OpenAI}, 2018.
+
+\bibitem{chen2023prompt}
+B.~Chen, Z.~Zhang, N.~Langren{\'e}, and S.~Zhu, ``Unleashing the potential of
+  prompt engineering in large language models: a comprehensive review,'' {\em
+  Guangdong Provincial Key Laboratory of Interdisciplinary Research and
+  Application for Data Science}, 2023.
+\newblock BNU-HKBU United International College, Beijing Normal University.
+
+\bibitem{openai2023gpt4}
+OpenAI, ``Gpt-4 technical report,'' {\em arXiv preprint arXiv:2303.08774},
+  2023.
+
+\bibitem{devlin2018bert}
+J.~Devlin, M.-W. Chang, K.~Lee, and K.~Toutanova, ``Bert: Pre-training of deep
+  bidirectional transformers for language understanding,'' 2018.
+
+\bibitem{brown2020language}
+T.~B. Brown, B.~Mann, N.~Ryder, M.~Subbiah, J.~D. Kaplan, P.~Dhariwal,
+  A.~Neelakantan, P.~Shyam, G.~Sastry, A.~Askell, S.~Agarwal, A.~Herbert-Voss,
+  G.~Krueger, T.~Henighan, R.~Child, A.~Ramesh, D.~M. Ziegler, J.~Wu,
+  C.~Winter, C.~Hesse, M.~Chen, E.~Sigler, M.~Litwin, S.~Gray, B.~Chess,
+  J.~Clark, C.~Berner, S.~McCandlish, A.~Radford, I.~Sutskever, and D.~Amodei,
+  ``Language models are few-shot learners,'' {\em Advances in Neural
+  Information Processing Systems}, vol.~33, pp.~1877--1901, 2020.
+
+\bibitem{finardi2024chronicles}
+P.~Finardi, L.~Avila, R.~Castaldoni, P.~Gengo, C.~Larcher, M.~Piau, P.~Costa,
+  and V.~Caridá, ``The chronicles of rag: The retriever, the chunk and the
+  generator.'' arXiv preprint arXiv:2401.07883, 2024.
+\newblock Preprint.
+
+\bibitem{nvidia2024facts}
+R.~Akkiraju, A.~Xu, D.~Bora, T.~Yu, L.~An, V.~Seth, A.~Shukla, P.~Gundecha,
+  H.~Mehta, A.~Jha, P.~Raj, A.~Balasubramanian, M.~Maram, G.~Muthusamy, S.~R.
+  Annepally, S.~Knowles, M.~Du, N.~Burnett, S.~Javiya, A.~Marannan, M.~Kumari,
+  S.~Jha, E.~Dereszenski, A.~Chakraborty, S.~Ranjan, A.~Terfai, A.~Surya,
+  T.~Mercer, V.~K. Thanigachalam, T.~Bar, S.~Krishnan, J.~Jaksic, N.~Algarici,
+  J.~Liberman, J.~Conway, S.~Nayyar, and J.~Boitano, ``Facts about building
+  retrieval augmented generation-based chatbots,'' 2024.
+
+\bibitem{turing1950computing}
+A.~M. Turing, ``Computing machinery and intelligence,'' {\em Mind}, vol.~59,
+  no.~236, 1950.
+
+\bibitem{zemcik2024history}
+M.~T. ZEM{\v{C}}{\v{IK}}, ``A brief history of chatbots,'' 2024.
+
+\bibitem{berry2024limits}
+D.~M. Berry, ``The limits of computation: Joseph weizenbaum and the eliza
+  chatbot,'' 2024.
+
+\bibitem{adamopoulou2020chatbots}
+E.~Adamopoulou and L.~Moussiade, ``Chatbots: History, technology, and
+  applications,'' {\em ScienceDirect}, 2020.
+
+\bibitem{bellegarda2013siri}
+J.~R. Bellegarda, ``Large--scale personal assistant technology deployment: the
+  siri experience,'' in {\em Interspeech 2013}, 2013.
+
+\bibitem{apple2023siri}
+A.~Inc., ``Siri - apple,'' 2023.
+
+\bibitem{anthropic2024claude3}
+Anthropic, ``Introducing the next generation of claude,'' March 2024.
+
+\bibitem{shuster2023ragas}
+K.~Shuster, D.~Vyas, P.~Mazaré, D.~Kiela, and S.~Roller, ``Ragas: An
+  evaluation framework for retrieval augmented generation,'' 2023.
+
+\bibitem{reddy2021customer}
+D.~Reddy, ``Increasing customer service efficiency through artificial
+  intelligence chatbot,'' {\em Revista de Gestão}, vol.~29, no.~1, pp.~19--33,
+  2021.
+
+\bibitem{su2023dragin}
+W.~Su, Y.~Tang, Q.~Ai, Z.~Wu, and Y.~Liu, ``Dragin: Dynamic retrieval augmented
+  generation based on the information needs of large language models,'' 2023.
+
+\end{thebibliography}

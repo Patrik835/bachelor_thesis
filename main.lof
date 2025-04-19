@@ -1,0 +1,14 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Comparison of the two LLMs with RAG vs Prompt Engineering approaches.}}{3}{figure.caption.10}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Transformer model architecture. Adapted from \cite {vaswani2017attention}}}{6}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces RAG Architecture Adapted from \cite {lewis2020retrieval}}}{9}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Evaluation diagram from blog about RAG evaluation \cite {myscale2024rag}}}{13}{figure.caption.13}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Overall Project Flow}}{23}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Overall Data Flow}}{24}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Data Object passed from video stream}}{25}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Folder structure of the project}}{27}{figure.caption.17}%
+\addvspace {10\p@ }

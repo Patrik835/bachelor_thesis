@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.31)  19 APR 2025 15:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.31)  25 APR 2025 19:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -482,7 +482,356 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@count@id=\count299
 \enitdp@description=\count300
 )
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 24
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex
+\pgfutil@everybye=\toks24
+\pgfutil@tempdima=\dimen174
+\pgfutil@tempdimb=\dimen175
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def
+\pgfutil@abb=\box57
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+\pgfkeys@pathtoks=\toks25
+\pgfkeys@temptoks=\toks26
+
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks27
+))
+\pgf@x=\dimen176
+\pgf@y=\dimen177
+\pgf@xa=\dimen178
+\pgf@ya=\dimen179
+\pgf@xb=\dimen180
+\pgf@yb=\dimen181
+\pgf@xc=\dimen182
+\pgf@yc=\dimen183
+\pgf@xd=\dimen184
+\pgf@yd=\dimen185
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count301
+\c@pgf@countb=\count302
+\c@pgf@countc=\count303
+\c@pgf@countd=\count304
+\t@pgf@toka=\toks28
+\t@pgf@tokb=\toks29
+\t@pgf@tokc=\toks30
+\pgf@sys@id@count=\count305
+
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count306
+\pgfsyssoftpath@bigbuffer@items=\count307
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex
+\pgfmath@dimen=\dimen186
+\pgfmath@count=\count308
+\pgfmath@box=\box58
+\pgfmath@toks=\toks31
+\pgfmath@stack@operand=\toks32
+\pgfmath@stack@operation=\toks33
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex
+\c@pgfmathroundto@lastzeros=\count309
+))
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen187
+\pgf@picmaxx=\dimen188
+\pgf@picminy=\dimen189
+\pgf@picmaxy=\dimen190
+\pgf@pathminx=\dimen191
+\pgf@pathmaxx=\dimen192
+\pgf@pathminy=\dimen193
+\pgf@pathmaxy=\dimen194
+\pgf@xx=\dimen195
+\pgf@xy=\dimen196
+\pgf@yx=\dimen197
+\pgf@yy=\dimen198
+\pgf@zx=\dimen199
+\pgf@zy=\dimen256
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen257
+\pgf@path@lasty=\dimen258
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen259
+\pgf@shorten@start@additional=\dimen260
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box59
+\pgf@hbox=\box60
+\pgf@layerbox@main=\box61
+\pgf@picture@serial@count=\count310
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen261
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen262
+\pgf@pt@y=\dimen263
+\pgf@pt@temp=\dimen264
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen265
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen266
+\pgf@sys@shading@range@num=\count311
+\pgf@shadingcount=\count312
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box62
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box63
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen267
+\pgf@nodesepend=\dimen268
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen269
+\pgffor@skip=\dimen270
+\pgffor@stack=\toks34
+\pgffor@toks=\toks35
+))
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count313
+\pgfplotmarksize=\dimen271
+)
+\tikz@lastx=\dimen272
+\tikz@lasty=\dimen273
+\tikz@lastxsaved=\dimen274
+\tikz@lastysaved=\dimen275
+\tikz@lastmovetox=\dimen276
+\tikz@lastmovetoy=\dimen277
+\tikzleveldistance=\dimen278
+\tikzsiblingdistance=\dimen279
+\tikz@figbox=\box64
+\tikz@figbox@bg=\box65
+\tikz@tempbox=\box66
+\tikz@tempbox@bg=\box67
+\tikztreelevel=\count314
+\tikznumberofchildren=\count315
+\tikznumberofcurrentchild=\count316
+\tikz@fig@count=\count317
+
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count318
+\pgfmatrixcurrentcolumn=\count319
+\pgf@matrix@numberofcolumns=\count320
+)
+\tikz@expandcount=\count321
+
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen280
+\lightrulewidth=\dimen281
+\cmidrulewidth=\dimen282
+\belowrulesep=\dimen283
+\belowbottomsep=\dimen284
+\aboverulesep=\dimen285
+\abovetopsep=\dimen286
+\cmidrulesep=\dimen287
+\cmidrulekern=\dimen288
+\defaultaddspace=\dimen289
+\@cmidla=\count322
+\@cmidlb=\count323
+\@aboverulesep=\dimen290
+\@belowrulesep=\dimen291
+\@thisruleclass=\count324
+\@lastruleclass=\count325
+\@thisrulewidth=\dimen292
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip88
+\multirow@cntb=\count326
+\multirow@dima=\skip89
+\bigstrutjot=\dimen293
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen294
+\pgfarrowlength=\dimen295
+\pgfarrowwidth=\dimen296
+\pgfarrowlinewidth=\dimen297
+)
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 28
 .
 
 (C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
@@ -491,44 +840,44 @@ File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 (C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2024-04-11 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count301
-\l__pdf_internal_box=\box57
+\l__color_backend_stack_int=\count327
+\l__pdf_internal_box=\box68
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
 
 (C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count302
-\scratchdimen=\dimen174
-\scratchbox=\box58
-\nofMPsegments=\count303
-\nofMParguments=\count304
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count305
-\MPscratchDim=\dimen175
-\MPnumerator=\count306
-\makeMPintoPDFobject=\count307
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count328
+\scratchdimen=\dimen298
+\scratchbox=\box69
+\nofMPsegments=\count329
+\nofMParguments=\count330
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count331
+\MPscratchDim=\dimen299
+\MPnumerator=\count332
+\makeMPintoPDFobject=\count333
+\everyMPtoPDFconversion=\toks37
 )
 (C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -574,45 +923,45 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 24.
+Package hyperref Info: Link coloring ON on input line 28.
 (main.out) (main.out)
-\@outlinefile=\write3
-\openout3 = `main.out'.
+\@outlinefile=\write4
+\openout4 = `main.out'.
 
-\c@lstlisting=\count308
+\c@lstlisting=\count334
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-8.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
+2.
 
 (C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-8.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
+2.
 
 (C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-28.
+32.
 
 (C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-28.
+32.
 
 (C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 28.
+(Font)              <10.95> on input line 32.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 28.
+(Font)              <8> on input line 32.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 28.
+(Font)              <6> on input line 32.
  [1
 
 
@@ -626,23 +975,53 @@ t/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] [2
 
 ] [5]
 (main.toc [6])
-\tf@toc=\write4
-\openout4 = `main.toc'.
+\tf@toc=\write5
+\openout5 = `main.toc'.
 
- [7] (main.lot)
-\tf@lot=\write5
-\openout5 = `main.lot'.
+ [7] (main.lot
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8
+.
 
- (main.lof
+(C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+))
+\tf@lot=\write6
+\openout6 = `main.lot'.
+
+
+(main.lof
 
 LaTeX Warning: Citation `myscale2024rag' on page viii undefined on input line 7
 .
 
-)
-\tf@lof=\write6
-\openout6 = `main.lof'.
+
+Overfull \hbox (1.01347pt too wide) in paragraph at lines 15--15
+ [][] [][][]\T1/phv/m/n/10.95 Flowchart il-lus-trat-ing the pipeline of re-spon
+se gen-er-a-tion in the project.[][] []  
+ []
+
+
+Overfull \hbox (5.1416pt too wide) in paragraph at lines 23--23
+ [][] [][][]\T1/phv/m/n/10.95 Heatmap of se-man-tic sim-i-lar-ity by em-bed-din
+g model, topK and chunk 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8
+
+{C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}]
+Overfull \hbox (4.56131pt too wide) in paragraph at lines 24--24
+ [][] [][][]\T1/phv/m/n/10.95 Heatmap of an-swer cor-re-la-tion by em-bed-ding 
+model, topK and chunk 
+ []
+
+)
+\tf@lof=\write7
+\openout7 = `main.lof'.
+
+ [9] [10
 
 ]
 Chapter 1.
@@ -651,42 +1030,41 @@ Underfull \vbox (badness 1694) has occurred while \output is active []
 
  [1
 
-
 ]
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 7
-9.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 8
+3.
 
 (C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 [2]
-<figures/analysys_contengency_table.png, id=360, 849.1725pt x 379.4175pt>
+<figures/analysys_contengency_table.png, id=415, 849.1725pt x 379.4175pt>
 File: figures/analysys_contengency_table.png Graphic file (type png)
 <use figures/analysys_contengency_table.png>
 Package pdftex.def Info: figures/analysys_contengency_table.png  used on input 
-line 108.
+line 112.
 (pdftex.def)             Requested size: 346.89732pt x 154.99481pt.
  [3 <./figures/analysys_contengency_table.png>] [4]
 Chapter 2.
 [5
 
 ]
-<figures/transformer_model.png, id=381, 907.13907pt x 559.33969pt>
+<figures/transformer_model.png, id=436, 907.13907pt x 559.33969pt>
 File: figures/transformer_model.png Graphic file (type png)
 <use figures/transformer_model.png>
-Package pdftex.def Info: figures/transformer_model.png  used on input line 149.
+Package pdftex.def Info: figures/transformer_model.png  used on input line 153.
 
 (pdftex.def)             Requested size: 346.89732pt x 213.89125pt.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 153.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 157.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6 <./figures/transformer_model.png>] [7] [8]
-<figures/rag_architecture.png, id=402, 1059.20718pt x 469.755pt>
+<figures/rag_architecture.png, id=457, 1059.20718pt x 469.755pt>
 File: figures/rag_architecture.png Graphic file (type png)
 <use figures/rag_architecture.png>
-Package pdftex.def Info: figures/rag_architecture.png  used on input line 226.
+Package pdftex.def Info: figures/rag_architecture.png  used on input line 230.
 (pdftex.def)             Requested size: 346.89732pt x 153.8441pt.
 
 Underfull \vbox (badness 1577) has occurred while \output is active []
@@ -695,29 +1073,33 @@ Underfull \vbox (badness 1577) has occurred while \output is active []
 Underfull \vbox (badness 1939) has occurred while \output is active []
 
  [10]
-Overfull \hbox (1.79082pt too wide) in paragraph at lines 274--275
+Overfull \hbox (1.79082pt too wide) in paragraph at lines 278--279
 \T1/phv/m/n/10.95 niques sound sim-ple and straight-for-ward, but they are ef-f
 ec-tive. Some of these are: rephras-
  []
 
-[11] [12]
-Overfull \hbox (5.4157pt too wide) in paragraph at lines 298--299
+[11]
+
+LaTeX Warning: Citation `ragas2023' on page 12 undefined on input line 296.
+
+[12]
+Overfull \hbox (5.4157pt too wide) in paragraph at lines 302--303
 []\T1/phv/b/n/10.95 Document-Derived Ques-tions: \T1/phv/m/n/10.95 Ques-tions c
 an be semi-automatically gen-er-ated from
  []
 
-<figures/rag_evaluation_diagram.png, id=429, 606.265pt x 402.50375pt>
+<figures/rag_evaluation_diagram.png, id=484, 606.265pt x 402.50375pt>
 File: figures/rag_evaluation_diagram.png Graphic file (type png)
 <use figures/rag_evaluation_diagram.png>
 Package pdftex.def Info: figures/rag_evaluation_diagram.png  used on input line
- 306.
+ 310.
 (pdftex.def)             Requested size: 346.89732pt x 230.30779pt.
 
-LaTeX Warning: Citation `myscale2024rag' on page 13 undefined on input line 307
+LaTeX Warning: Citation `myscale2024rag' on page 13 undefined on input line 311
 .
 
 
-LaTeX Warning: Citation `myscale2024rag' on page 13 undefined on input line 307
+LaTeX Warning: Citation `myscale2024rag' on page 13 undefined on input line 311
 .
 
 [13 <./figures/rag_evaluation_diagram.png (PNG copy)>] [14]
@@ -725,70 +1107,253 @@ Chapter 3.
 [15
 
 ]
-Overfull \hbox (5.78252pt too wide) in paragraph at lines 353--354
+Overfull \hbox (5.78252pt too wide) in paragraph at lines 357--358
 []\T1/phv/m/n/10.95 These im-prove-ments opened the door to more in-tel-li-gent
  and flex-i-ble chat bots,especially
  []
 
 [16] [17]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 393.
+(Font)              <9> on input line 397.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 393.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-93.
- (C:\Users\skelt\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [18{C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc
-}] [19] [20
+(Font)              <5> on input line 397.
+ [18] [19] [20
 
 ]
 Chapter 4.
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 419--421
+Underfull \hbox (badness 10000) in paragraph at lines 423--425
 
  []
 
 [22]
-<figures/project_flow.png, id=524, 241.65282pt x 455.45157pt>
+<figures/project_flow.png, id=580, 241.65282pt x 455.45157pt>
 File: figures/project_flow.png Graphic file (type png)
 <use figures/project_flow.png>
-Package pdftex.def Info: figures/project_flow.png  used on input line 458.
+Package pdftex.def Info: figures/project_flow.png  used on input line 462.
 (pdftex.def)             Requested size: 151.76964pt x 286.0534pt.
  [23 <./figures/project_flow.png>]
-<figures/data_flow.png, id=534, 170.13562pt x 292.09125pt>
+<figures/data_flow.png, id=588, 170.13562pt x 292.09125pt>
 File: figures/data_flow.png Graphic file (type png)
 <use figures/data_flow.png>
-Package pdftex.def Info: figures/data_flow.png  used on input line 474.
+Package pdftex.def Info: figures/data_flow.png  used on input line 478.
 (pdftex.def)             Requested size: 151.76964pt x 260.57542pt.
 
 
-LaTeX Warning: Citation `cloudflare_hls' on page 24 undefined on input line 481
+LaTeX Warning: Citation `cloudflare_hls' on page 24 undefined on input line 485
 .
 
 [24 <./figures/data_flow.png>]
-<figures/data_object.png, id=542, 510.40688pt x 149.05687pt>
+<figures/data_object.png, id=596, 510.40688pt x 149.05687pt>
 File: figures/data_object.png Graphic file (type png)
 <use figures/data_object.png>
-Package pdftex.def Info: figures/data_object.png  used on input line 497.
+Package pdftex.def Info: figures/data_object.png  used on input line 502.
 (pdftex.def)             Requested size: 542.02501pt x 158.29974pt.
 
-Overfull \hbox (108.405pt too wide) in paragraph at lines 497--498
+Overfull \hbox (108.405pt too wide) in paragraph at lines 502--503
  [][] 
  []
 
-[25 <./figures/data_object.png>]
-<figures/folder_structure.png, id=549, 172.39406pt x 214.55156pt>
+[25 <./figures/data_object.png>] [26]
+<figures/folder_structure.png, id=607, 172.39406pt x 214.55156pt>
 File: figures/folder_structure.png Graphic file (type png)
 <use figures/folder_structure.png>
-Package pdftex.def Info: figures/folder_structure.png  used on input line 529.
+Package pdftex.def Info: figures/folder_structure.png  used on input line 536.
 (pdftex.def)             Requested size: 238.49232pt x 296.81805pt.
- [26] [27 <./figures/folder_structure.png>]
-[28] [29] [30
+
+Overfull \hbox (4.17177pt too wide) in paragraph at lines 545--546
+[]\T1/phv/b/n/10.95 POST /ask\T1/phv/m/n/10.95 : Han-dles user queries by re-tr
+iev-ing rel-e-vant con-text from the vec-tor database
+ []
+
+[27 <./figures/folder_structure.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 557--559
+
+ []
+
+[28] [29]
+<figures/chunking_logic.png, id=629, 420.82219pt x 449.42906pt>
+File: figures/chunking_logic.png Graphic file (type png)
+<use figures/chunking_logic.png>
+Package pdftex.def Info: figures/chunking_logic.png  used on input line 611.
+(pdftex.def)             Requested size: 368.57965pt x 393.64034pt.
+ [30 <./figures/chunking_logic.png>]
+
+LaTeX Warning: Citation `mtebleaderboard' on page 31 undefined on input line 63
+9.
+
+[31] [32{C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mat
+hit.enc}{C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.
+enc}]
+<figures/response_pipeline.png, id=646, 1027.84pt x 1541.76pt>
+File: figures/response_pipeline.png Graphic file (type png)
+<use figures/response_pipeline.png>
+Package pdftex.def Info: figures/response_pipeline.png  used on input line 701.
+
+(pdftex.def)             Requested size: 260.17465pt x 390.26175pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33]
+[34 <./figures/response_pipeline.png (PNG copy)>]
+Overfull \hbox (762.11656pt too wide) in paragraph at lines 756--756
+[]   \T1/lmtt/m/n/10.95 "answer": "The commentators calling the game are Mark J
+ones, Louis Riddick, and Quint Kessenich. They're providing insights and observ
+ations throughout the matchup between Washington State and Wisconsin.",[] 
+ []
+
+[35] [36{C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mat
+hsy.enc}] [37]
+
+LaTeX Warning: Reference `fig:llm_prompt_engineering' on page 38 undefined on i
+nput line 845.
+
+[38] [39] [40
 
 ]
 Chapter 5.
-[31] (main.bbl [32
+<figures/overlap_vs_nooverlap.png, id=694, 753.81625pt x 1102.1175pt>
+File: figures/overlap_vs_nooverlap.png Graphic file (type png)
+<use figures/overlap_vs_nooverlap.png>
+Package pdftex.def Info: figures/overlap_vs_nooverlap.png  used on input line 8
+71.
+(pdftex.def)             Requested size: 433.62001pt x 633.96489pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
+Overfull \vbox (12.91661pt too high) has occurred while \output is active []
+
+
+[42 <./figures/overlap_vs_nooverlap.png>]
+<figures/heat_map_average.png, id=707, 809.424pt x 570.933pt>
+File: figures/heat_map_average.png Graphic file (type png)
+<use figures/heat_map_average.png>
+Package pdftex.def Info: figures/heat_map_average.png  used on input line 911.
+(pdftex.def)             Requested size: 476.98465pt x 336.44681pt.
+
+Overfull \hbox (43.36464pt too wide) in paragraph at lines 911--912
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43]
+<figures/heatmap_answer_relevancy.png, id=714, 802.9197pt x 570.933pt>
+File: figures/heatmap_answer_relevancy.png Graphic file (type png)
+<use figures/heatmap_answer_relevancy.png>
+Package pdftex.def Info: figures/heatmap_answer_relevancy.png  used on input li
+ne 924.
+(pdftex.def)             Requested size: 476.98465pt x 339.17357pt.
+
+Overfull \hbox (43.36464pt too wide) in paragraph at lines 924--925
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44 <./figures/heat_map_average.png>]
+Overfull \hbox (4.3857pt too wide) in paragraph at lines 930--933
+\T1/phv/m/n/10.95 chunks that are ac-tu-ally rel-e-vant to the user's query. We
+ can see that the gemini-embedding-
+ []
+
+<figures/heatmap_context_precision.png, id=720, 809.424pt x 570.933pt>
+File: figures/heatmap_context_precision.png Graphic file (type png)
+<use figures/heatmap_context_precision.png>
+Package pdftex.def Info: figures/heatmap_context_precision.png  used on input l
+ine 936.
+(pdftex.def)             Requested size: 476.98465pt x 336.44681pt.
+
+Overfull \hbox (43.36464pt too wide) in paragraph at lines 936--937
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45 <./figures/heatmap_answer_relevancy.png>]
+Overfull \hbox (98.95523pt too wide) in paragraph at lines 941--942
+[]\T1/phv/m/n/10.95 Next, I will de-scribe con-text re-call. The heatmap in Fig
+-ure [][]5.5[][] re-veals that the \T1/lmtt/m/n/10.95 gemini-embedding-exp-03-0
+7
+ []
+
+
+Overfull \hbox (6.69765pt too wide) in paragraph at lines 941--942
+\T1/phv/m/n/10.95 con-text, es-pe-cially when more chunks are re-trieved. How-e
+ver, the \T1/lmtt/m/n/10.95 text-embedding-ada-002
+ []
+
+<figures/heatmap_context_recall.png, id=728, 802.9197pt x 570.933pt>
+File: figures/heatmap_context_recall.png Graphic file (type png)
+<use figures/heatmap_context_recall.png>
+Package pdftex.def Info: figures/heatmap_context_recall.png  used on input line
+ 945.
+(pdftex.def)             Requested size: 476.98465pt x 339.17357pt.
+
+Overfull \hbox (43.36464pt too wide) in paragraph at lines 945--946
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46 <./figures/heatmap_context_precision.png>]
+<figures/heatmap_faithfulness.png, id=735, 809.424pt x 570.933pt>
+File: figures/heatmap_faithfulness.png Graphic file (type png)
+<use figures/heatmap_faithfulness.png>
+Package pdftex.def Info: figures/heatmap_faithfulness.png  used on input line 9
+54.
+(pdftex.def)             Requested size: 476.98465pt x 336.44681pt.
+
+Overfull \hbox (43.36464pt too wide) in paragraph at lines 954--955
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47 <./figures/heatmap_context_recall.png>]
+<figures/heatmap_semantic_sim.png, id=742, 815.9283pt x 570.933pt>
+File: figures/heatmap_semantic_sim.png Graphic file (type png)
+<use figures/heatmap_semantic_sim.png>
+Package pdftex.def Info: figures/heatmap_semantic_sim.png  used on input line 9
+63.
+(pdftex.def)             Requested size: 476.98465pt x 333.7636pt.
+
+Overfull \hbox (43.36464pt too wide) in paragraph at lines 963--964
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48 <./figures/heatmap_faithfulness.png>]
+<figures/heatmap_answer_corr.png, id=750, 802.9197pt x 570.933pt>
+File: figures/heatmap_answer_corr.png Graphic file (type png)
+<use figures/heatmap_answer_corr.png>
+Package pdftex.def Info: figures/heatmap_answer_corr.png  used on input line 97
+2.
+(pdftex.def)             Requested size: 476.98465pt x 339.17357pt.
+
+Overfull \hbox (43.36464pt too wide) in paragraph at lines 972--973
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49 <./figures/heatmap_semantic_sim.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50 <./figures/heatmap_answer_corr.png>] [51] [52
+
+]
+Chapter 6.
+[53] (main.bbl [54
 
 
 ]
@@ -808,7 +1373,7 @@ or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
-[33]) [34] (main.aux)
+[55]) [56] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
@@ -818,25 +1383,28 @@ L3 programming layer <2024-04-11>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7316A65545460D9AD83467B58A120086;8275.
+(rerunfilecheck)             Checksum: D5B22C2699AFBC54C64371A3FA047DFE;8218.
  ) 
 Here is how much of TeX's memory you used:
- 15325 strings out of 474370
- 248543 string characters out of 5740535
- 1937754 words of memory out of 5000000
- 37340 multiletter control sequences out of 15000+600000
- 627338 words of font info for 86 fonts, out of 8000000 for 9000
+ 26427 strings out of 474370
+ 497503 string characters out of 5740535
+ 1939754 words of memory out of 5000000
+ 48170 multiletter control sequences out of 15000+600000
+ 630547 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,8n,93p,773b,594s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pf
-b><C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb
-><C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.
-pfb><C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr
-8a.pfb><C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/u
-hvro8a.pfb>
-Output written on main.pdf (42 pages, 420241 bytes).
+ 84i,11n,93p,1038b,594s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pf
+b><C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb
+><C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb
+><C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb
+><C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
+<C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.p
+fb><C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8
+a.pfb><C:/Users/skelt/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uh
+vro8a.pfb>
+Output written on main.pdf (66 pages, 2031182 bytes).
 PDF statistics:
- 653 PDF objects out of 1000 (max. 8388607)
- 150 named destinations out of 1000 (max. 500000)
- 497 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 871 PDF objects out of 1000 (max. 8388607)
+ 193 named destinations out of 1000 (max. 500000)
+ 575 words of extra memory for PDF output out of 10000 (max. 10000000)
 

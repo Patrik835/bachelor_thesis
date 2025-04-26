@@ -11,4 +11,15 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Overall Data Flow}}{24}{figure.caption.15}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Data Object passed from video stream}}{25}{figure.caption.16}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Folder structure of the project}}{27}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Flowchart illustrating the dynamic chunking loop used for real-time data streaming.}}{30}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Flowchart illustrating the pipeline of response generation in the project.}}{34}{figure.caption.19}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Evaluation metrics for different chunk sizes (no overlap vs Overlap)}}{42}{figure.caption.20}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Heatmap of average metrics by embedding model, topK and chunk size configurations. (excluding aswer correctness metric)}}{44}{figure.caption.22}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Heatmap of answer relevancy by embedding model, topK and chunk size configurations.}}{45}{figure.caption.23}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Heatmap of context precision by embedding model, topK and chunk size configurations.}}{46}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Heatmap of context recall by embedding model, topK and chunk size configurations.}}{47}{figure.caption.25}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Heatmap of faithfulness by embedding model, topK and chunk size configurations.}}{48}{figure.caption.26}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Heatmap of semantic similarity by embedding model, topK and chunk size configurations.}}{49}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Heatmap of answer correlation by embedding model, topK and chunk size configurations.}}{50}{figure.caption.28}%
 \addvspace {10\p@ }

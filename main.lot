@@ -4,3 +4,6 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Evaluation Results by Chunk Size and Overlap Configuration}}{43}{table.caption.21}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Evaluation Results for \texttt {gemini-embedding-exp-03-07} by Chunk Size and Overlap Configuration}}{50}{table.caption.29}%
+\addvspace {10\p@ }

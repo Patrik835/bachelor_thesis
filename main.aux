@@ -56,8 +56,10 @@
 \citation{chen2023prompt}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}Retrieval}{11}{subsection.2.4.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.5}Prompt Engineering}{11}{section.2.5}\protected@file@percent }
+\citation{ragas2023}
 \@writefile{toc}{\contentsline {section}{\numberline {2.6}Speech to text}{12}{section.2.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.7}Evaluation}{12}{section.2.7}\protected@file@percent }
+\newlabel{sec:background_evaluation}{{2.7}{12}{Evaluation}{section.2.7}{}}
 \citation{myscale2024rag}
 \citation{myscale2024rag}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Evaluation diagram from blog about RAG evaluation \cite  {myscale2024rag}}}{13}{figure.caption.13}\protected@file@percent }
@@ -112,30 +114,59 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Data Object passed from video stream}}{25}{figure.caption.16}\protected@file@percent }
 \newlabel{fig:data_object}{{4.3}{25}{Data Object passed from video stream}{figure.caption.16}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}Backend Development}{25}{subsection.4.1.4}\protected@file@percent }
-\citation{vaswani2017attention}
-\citation{radford2018improving}
-\citation{anthropic2024claude3}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Folder structure of the project}}{27}{figure.caption.17}\protected@file@percent }
 \newlabel{fig:folder_structure}{{4.4}{27}{Folder structure of the project}{figure.caption.17}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.5}Chunking}{27}{subsection.4.1.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.6}Embedding}{27}{subsection.4.1.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.7}Response Generation}{27}{subsection.4.1.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.8}Prompt Engineering}{27}{subsection.4.1.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.9}Evaluation}{27}{subsection.4.1.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.10}Experimental Visualization}{27}{subsection.4.1.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Theoretical Background}{27}{section.4.2}\protected@file@percent }
-\citation{openai2023gpt4}
-\citation{anthropic2024claude3}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Experimental Setup Plan}{28}{section.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Evaluation Plan}{29}{section.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Limitations of the Proposed Methods}{29}{section.4.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Summary}{31}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.5}Chunking}{28}{subsection.4.1.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Flowchart illustrating the dynamic chunking loop used for real-time data streaming.}}{30}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:chunking_loop}{{4.5}{30}{Flowchart illustrating the dynamic chunking loop used for real-time data streaming}{figure.caption.18}{}}
+\citation{mtebleaderboard}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.6}Embedding}{31}{subsection.4.1.6}\protected@file@percent }
+\newlabel{sec:embedding}{{4.1.6}{31}{Embedding}{subsection.4.1.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.7}Response Generation}{32}{subsection.4.1.7}\protected@file@percent }
+\newlabel{sec:response_generation}{{4.1.7}{32}{Response Generation}{subsection.4.1.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Flowchart illustrating the pipeline of response generation in the project.}}{34}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:response_pipeline}{{4.6}{34}{Flowchart illustrating the pipeline of response generation in the project}{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.8}Prompt Engineering}{34}{subsection.4.1.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.9}Evaluation}{35}{subsection.4.1.9}\protected@file@percent }
+\newlabel{sec:evaluation}{{4.1.9}{35}{Evaluation}{subsection.4.1.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.10}Experimental Visualization}{38}{subsection.4.1.10}\protected@file@percent }
+\newlabel{sec:experimental_visualization}{{4.1.10}{38}{Experimental Visualization}{subsection.4.1.10}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Results}{41}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}How will I achieve research goals}{31}{section.5.1}\protected@file@percent }
+\newlabel{ch:results}{{5}{41}{Results}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Best Parameters}{41}{section.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Evaluation metrics for different chunk sizes (no overlap vs Overlap)}}{42}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:overlap}{{5.1}{42}{Evaluation metrics for different chunk sizes (no overlap vs Overlap)}{figure.caption.20}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Evaluation Results by Chunk Size and Overlap Configuration}}{43}{table.caption.21}\protected@file@percent }
+\newlabel{tab:chunk_overlap_results}{{5.1}{43}{Evaluation Results by Chunk Size and Overlap Configuration}{table.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Heatmap of average metrics by embedding model, topK and chunk size configurations. (excluding aswer correctness metric)}}{44}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:heatmap_avg_config}{{5.2}{44}{Heatmap of average metrics by embedding model, topK and chunk size configurations. (excluding aswer correctness metric)}{figure.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Heatmap of answer relevancy by embedding model, topK and chunk size configurations.}}{45}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:heatmap_ans_rel}{{5.3}{45}{Heatmap of answer relevancy by embedding model, topK and chunk size configurations}{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Heatmap of context precision by embedding model, topK and chunk size configurations.}}{46}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:heatmap_ctx_prc}{{5.4}{46}{Heatmap of context precision by embedding model, topK and chunk size configurations}{figure.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Heatmap of context recall by embedding model, topK and chunk size configurations.}}{47}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:heatmap_ctx_rec}{{5.5}{47}{Heatmap of context recall by embedding model, topK and chunk size configurations}{figure.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Heatmap of faithfulness by embedding model, topK and chunk size configurations.}}{48}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:heatmap_faithfullnes}{{5.6}{48}{Heatmap of faithfulness by embedding model, topK and chunk size configurations}{figure.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Heatmap of semantic similarity by embedding model, topK and chunk size configurations.}}{49}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:heatmap_sem_sim}{{5.7}{49}{Heatmap of semantic similarity by embedding model, topK and chunk size configurations}{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Heatmap of answer correlation by embedding model, topK and chunk size configurations.}}{50}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:heatmap_ans_corr}{{5.8}{50}{Heatmap of answer correlation by embedding model, topK and chunk size configurations}{figure.caption.28}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Evaluation Results for \texttt  {gemini-embedding-exp-03-07} by Chunk Size and Overlap Configuration}}{50}{table.caption.29}\protected@file@percent }
+\newlabel{tab:best_config_overlap}{{5.2}{50}{Evaluation Results for \texttt {gemini-embedding-exp-03-07} by Chunk Size and Overlap Configuration}{table.caption.29}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Best LLM}{51}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Efficiency and cost}{51}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Summary}{53}{chapter.6}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Conclusion}{53}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Discussion}{53}{section.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Future Improvement Opportunities}{53}{section.6.3}\protected@file@percent }
 \bibstyle{ieeetr}
 \bibdata{references}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{32}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{54}{section.6.3}\protected@file@percent }
 \bibcite{vaswani2017attention}{1}
 \bibcite{lewis2020retrieval}{2}
 \bibcite{radford2018improving}{3}
@@ -155,4 +186,4 @@
 \bibcite{shuster2023ragas}{17}
 \bibcite{reddy2021customer}{18}
 \bibcite{su2023dragin}{19}
-\gdef \@abspage@last{42}
+\gdef \@abspage@last{66}

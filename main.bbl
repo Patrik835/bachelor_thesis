@@ -11,6 +11,9 @@ P.~Lewis, E.~Perez, A.~Piktus, F.~Petroni, V.~Karpukhin, N.~Goyal, H.~Küttler,
   ``Retrieval-augmented generation for knowledge-intensive {NLP} tasks,'' {\em
   Advances in Neural Information Processing Systems}, vol.~33, 2020.
 
+\bibitem{myscale2024rag}
+{MyScale}, ``The ultimate guide to evaluate rag system components,'' 2024.
+
 \bibitem{radford2018improving}
 A.~Radford, K.~Narasimhan, T.~Salimans, and I.~Sutskever, ``Improving language
   understanding by generative pre-training,'' {\em OpenAI}, 2018.
@@ -54,6 +57,11 @@ R.~Akkiraju, A.~Xu, D.~Bora, T.~Yu, L.~An, V.~Seth, A.~Shukla, P.~Gundecha,
   J.~Liberman, J.~Conway, S.~Nayyar, and J.~Boitano, ``Facts about building
   retrieval augmented generation-based chatbots,'' 2024.
 
+\bibitem{ragas2023}
+A.~Madan, P.~Rai, A.~Paranjape, P.~Bhargava, A.~Zareian, M.~Kale, and A.~Dubey,
+  ``Ragas: An evaluation framework for retrieval-augmented generation,'' {\em
+  arXiv preprint arXiv:2309.15217}, 2023.
+
 \bibitem{turing1950computing}
 A.~M. Turing, ``Computing machinery and intelligence,'' {\em Mind}, vol.~59,
   no.~236, 1950.
@@ -91,5 +99,15 @@ D.~Reddy, ``Increasing customer service efficiency through artificial
 \bibitem{su2023dragin}
 W.~Su, Y.~Tang, Q.~Ai, Z.~Wu, and Y.~Liu, ``Dragin: Dynamic retrieval augmented
   generation based on the information needs of large language models,'' 2023.
+
+\bibitem{cloudflarehls}
+Cloudflare, ``What is http live streaming?,'' 2025.
+
+\bibitem{mtebleaderboard}
+N.~Muennighoff, L.~Tunstall, L.~Magne, T.~Dettmers, T.~Li, L.~F. Berrios,
+  L.~Rimell, A.~Williams, T.~Schick, S.~Ruder, N.~Goyal, D.~Dey, and T.~L.
+  Scao, ``Massive text embedding benchmark (mteb) leaderboard.'' Hugging Face
+  Spaces, 2023.
+\newblock \url{https://huggingface.co/spaces/mteb/leaderboard}.
 
 \end{thebibliography}

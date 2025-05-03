@@ -42,25 +42,43 @@ T.~B. Brown, B.~Mann, N.~Ryder, M.~Subbiah, J.~D. Kaplan, P.~Dhariwal,
   ``Language models are few-shot learners,'' {\em Advances in Neural
   Information Processing Systems}, vol.~33, pp.~1877--1901, 2020.
 
-\bibitem{finardi2024chronicles}
-P.~Finardi, L.~Avila, R.~Castaldoni, P.~Gengo, C.~Larcher, M.~Piau, P.~Costa,
-  and V.~Caridá, ``The chronicles of rag: The retriever, the chunk and the
-  generator.'' arXiv preprint arXiv:2401.07883, 2024.
-\newblock Preprint.
+\bibitem{dosovitskiy2020vit}
+A.~Dosovitskiy, L.~Beyer, A.~Kolesnikov, D.~Weissenborn, X.~Zhai,
+  T.~Unterthiner, M.~Dehghani, M.~Minderer, G.~Heigold, S.~Gelly, {\em et~al.},
+  ``An image is worth 16x16 words: Transformers for image recognition at
+  scale,'' {\em arXiv preprint arXiv:2010.11929}, 2020.
 
-\bibitem{nvidia2024facts}
-R.~Akkiraju, A.~Xu, D.~Bora, T.~Yu, L.~An, V.~Seth, A.~Shukla, P.~Gundecha,
-  H.~Mehta, A.~Jha, P.~Raj, A.~Balasubramanian, M.~Maram, G.~Muthusamy, S.~R.
-  Annepally, S.~Knowles, M.~Du, N.~Burnett, S.~Javiya, A.~Marannan, M.~Kumari,
-  S.~Jha, E.~Dereszenski, A.~Chakraborty, S.~Ranjan, A.~Terfai, A.~Surya,
-  T.~Mercer, V.~K. Thanigachalam, T.~Bar, S.~Krishnan, J.~Jaksic, N.~Algarici,
-  J.~Liberman, J.~Conway, S.~Nayyar, and J.~Boitano, ``Facts about building
-  retrieval augmented generation-based chatbots,'' 2024.
+\bibitem{baevski2020wav2vec}
+A.~Baevski, Y.~Zhou, A.~Mohamed, and M.~Auli, ``wav2vec 2.0: A framework for
+  self-supervised learning of speech representations,'' {\em Advances in Neural
+  Information Processing Systems}, vol.~33, pp.~12449--12460, 2020.
 
-\bibitem{ragas2023}
-A.~Madan, P.~Rai, A.~Paranjape, P.~Bhargava, A.~Zareian, M.~Kale, and A.~Dubey,
-  ``Ragas: An evaluation framework for retrieval-augmented generation,'' {\em
-  arXiv preprint arXiv:2309.15217}, 2023.
+\bibitem{jumper2021alphafold}
+J.~Jumper, R.~Evans, A.~Pritzel, T.~Green, M.~Figurnov, O.~Ronneberger,
+  K.~Tunyasuvunakool, R.~Bates, A.~Žídek, A.~Potapenko, {\em et~al.},
+  ``Highly accurate protein structure prediction with alphafold,'' {\em
+  Nature}, vol.~596, no.~7873, pp.~583--589, 2021.
+
+\bibitem{radford2019language}
+A.~Radford, J.~Wu, R.~Child, D.~Luan, D.~Amodei, and I.~Sutskever, ``Language
+  models are unsupervised multitask learners,'' {\em OpenAI Blog}, vol.~1,
+  no.~8, p.~9, 2019.
+\newblock
+  https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf.
+
+\bibitem{lewkowycz2022solving}
+A.~Lewkowycz, J.~Austin, D.~Dohan, {\em et~al.}, ``Solving quantitative
+  reasoning problems with language models,'' {\em arXiv preprint
+  arXiv:2206.14858}, 2022.
+
+\bibitem{chen2021evaluating}
+M.~Chen, J.~Tworek, H.~Jun, {\em et~al.}, ``Evaluating large language models
+  trained on code,'' {\em arXiv preprint arXiv:2107.03374}, 2021.
+
+\bibitem{radford2021learning}
+A.~Radford, J.~W. Kim, J.~Hallacy, {\em et~al.}, ``Learning transferable visual
+  models from natural language supervision,'' in {\em International Conference
+  on Machine Learning}, pp.~8748--8763, PMLR, 2021.
 
 \bibitem{turing1950computing}
 A.~M. Turing, ``Computing machinery and intelligence,'' {\em Mind}, vol.~59,
@@ -84,12 +102,70 @@ J.~R. Bellegarda, ``Large--scale personal assistant technology deployment: the
 \bibitem{apple2023siri}
 A.~Inc., ``Siri - apple,'' 2023.
 
+\bibitem{finardi2024chronicles}
+P.~Finardi, L.~Avila, R.~Castaldoni, P.~Gengo, C.~Larcher, M.~Piau, P.~Costa,
+  and V.~Caridá, ``The chronicles of rag: The retriever, the chunk and the
+  generator.'' arXiv preprint arXiv:2401.07883, 2024.
+\newblock Preprint.
+
+\bibitem{nvidia2024facts}
+R.~Akkiraju, A.~Xu, D.~Bora, T.~Yu, L.~An, V.~Seth, A.~Shukla, P.~Gundecha,
+  H.~Mehta, A.~Jha, P.~Raj, A.~Balasubramanian, M.~Maram, G.~Muthusamy, S.~R.
+  Annepally, S.~Knowles, M.~Du, N.~Burnett, S.~Javiya, A.~Marannan, M.~Kumari,
+  S.~Jha, E.~Dereszenski, A.~Chakraborty, S.~Ranjan, A.~Terfai, A.~Surya,
+  T.~Mercer, V.~K. Thanigachalam, T.~Bar, S.~Krishnan, J.~Jaksic, N.~Algarici,
+  J.~Liberman, J.~Conway, S.~Nayyar, and J.~Boitano, ``Facts about building
+  retrieval augmented generation-based chatbots,'' 2024.
+
+\bibitem{wei2022chain}
+J.~Wei, X.~Wang, D.~Schuurmans, M.~Bosma, B.~Ichter, F.~Xia, E.~Chi, Q.~Le, and
+  D.~Zhou, ``Chain of thought prompting elicits reasoning in large language
+  models,'' {\em arXiv preprint arXiv:2201.11903}, 2022.
+
+\bibitem{mialon2023augmented}
+G.~Mialon, H.~Touvron, G.~Levillain, T.~Lacroix, T.~Scialom, G.~Staerman,
+  A.~Sigtyar, G.~Lample, H.~Jegou, P.~Gallinari, {\em et~al.}, ``Augmented
+  language models: a survey,'' {\em arXiv preprint arXiv:2302.07842}, 2023.
+
+\bibitem{ragas2023}
+A.~Madan, P.~Rai, A.~Paranjape, P.~Bhargava, A.~Zareian, M.~Kale, and A.~Dubey,
+  ``Ragas: An evaluation framework for retrieval-augmented generation,'' {\em
+  arXiv preprint arXiv:2309.15217}, 2023.
+
 \bibitem{anthropic2024claude3}
 Anthropic, ``Introducing the next generation of claude,'' March 2024.
+
+\bibitem{karpukhin2020dense}
+V.~Karpukhin, B.~Oguz, S.~Min, P.~Lewis, L.~Wu, S.~Edunov, D.~Chen, and W.-t.
+  Yih, ``Dense passage retrieval for open-domain question answering,'' in {\em
+  Proceedings of the 2020 Conference on Empirical Methods in Natural Language
+  Processing (EMNLP)}, 2020.
+
+\bibitem{liu2023pre}
+P.~Liu {\em et~al.}, ``Pre-train prompting: What works and why,'' {\em
+  Transactions of the Association for Computational Linguistics}, 2023.
+
+\bibitem{zhou2022least}
+D.~Zhou {\em et~al.}, ``Least-to-most prompting enables complex reasoning in
+  large language models,'' {\em arXiv preprint arXiv:2205.10625}, 2022.
+
+\bibitem{kojima2022large}
+T.~Kojima {\em et~al.}, ``Large language models are zero-shot reasoners,'' {\em
+  arXiv preprint arXiv:2205.11916}, 2022.
+
+\bibitem{reynolds2021prompt}
+L.~Reynolds and K.~McDonell, ``Prompt programming for large language models:
+  Beyond the few-shot paradigm,'' {\em arXiv preprint arXiv:2102.07350}, 2021.
 
 \bibitem{shuster2023ragas}
 K.~Shuster, D.~Vyas, P.~Mazaré, D.~Kiela, and S.~Roller, ``Ragas: An
   evaluation framework for retrieval augmented generation,'' 2023.
+
+\bibitem{honovich2022true}
+O.~Honovich, T.~Scialom, F.~Ladhak, T.~Schick, and O.~Levy, ``True:
+  Re-evaluating factual consistency evaluation,'' in {\em Proceedings of the
+  2022 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  2022.
 
 \bibitem{reddy2021customer}
 D.~Reddy, ``Increasing customer service efficiency through artificial

@@ -1,24 +1,24 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Comparison of the two LLMs with RAG vs Prompt Engineering approaches.}}{3}{figure.caption.10}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Comparison of the two LLMs with RAG vs Prompt Engineering approaches.}}{3}{figure.caption.8}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Transformer model architecture. Adapted from \cite {vaswani2017attention}}}{6}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces RAG Architecture of this Study Adapted from \cite {lewis2020retrieval}}}{9}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Evaluation diagram from blog about RAG evaluation \cite {myscale2024rag}}}{13}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Transformer model architecture. Adapted from \cite {vaswani2017attention}}}{6}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces RAG Architecture of this Study Adapted from \cite {lewis2020retrieval}}}{10}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Evaluation diagram from blog about RAG evaluation \cite {myscale2024rag}}}{14}{figure.caption.11}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Overall Project Flow}}{24}{figure.caption.14}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Overall Data Flow}}{25}{figure.caption.15}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Data Object passed from video stream}}{26}{figure.caption.16}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Folder structure of the project}}{28}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Flowchart illustrating the dynamic chunking loop used for real-time data streaming.}}{31}{figure.caption.18}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Flowchart illustrating the pipeline of response generation in the project.}}{35}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Overall Project Flow}}{24}{figure.caption.12}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Overall Data Flow}}{25}{figure.caption.13}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Data Object passed from video stream}}{26}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Folder structure of the project}}{28}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Flowchart illustrating the dynamic chunking loop used for real-time data streaming.}}{31}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Flowchart illustrating the pipeline of response generation in the project.}}{35}{figure.caption.17}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Evaluation metrics for different chunk sizes (no overlap vs Overlap)}}{42}{figure.caption.20}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Heatmap of average metrics by embedding model, topK and chunk size configurations. (excluding aswer correctness metric)}}{44}{figure.caption.22}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Comparison of Common Evaluation Metrics and average response generation times with LLM: gpt-4o-mini between best RAG configuration and Prompt engineering approaches}}{47}{figure.caption.24}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Comparison of Common Evaluation Metrics and average response generation times with LLM: gemini-2.0-flash between best RAG configuration and Prompt engineering approaches}}{48}{figure.caption.25}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Comparison of average metrics for all the LLMs for RAG approach with normalized average times to generate a response}}{49}{figure.caption.26}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Comparison of average metrics for all the LLMs for Prompt Engineering approach with normalized average times to generate a response}}{49}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Evaluation metrics for different chunk sizes (no overlap vs Overlap)}}{42}{figure.caption.18}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Heatmap of average metrics by embedding model, topK and chunk size configurations. (excluding aswer correctness metric)}}{44}{figure.caption.20}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Comparison of Common Evaluation Metrics and average response generation times with LLM: gpt-4o-mini between best RAG configuration and Prompt engineering approaches}}{46}{figure.caption.22}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Comparison of Common Evaluation Metrics and average response generation times with LLM: gemini-2.0-flash between best RAG configuration and Prompt engineering approaches}}{47}{figure.caption.23}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Comparison of average metrics for all the LLMs for RAG approach with normalized average times to generate a response}}{48}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Comparison of average metrics for all the LLMs for Prompt Engineering approach with normalized average times to generate a response}}{48}{figure.caption.25}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

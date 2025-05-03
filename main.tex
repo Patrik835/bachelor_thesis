@@ -1,6 +1,6 @@
 \documentclass{imc-inf}
 
-\title{Real-Time Chat Bot for Live-stream \\[0.25em] Content}
+\title{Real-Time Chatbot for Live-stream \\[0.25em] Content}
 \subtitle{ }
 \thesistype{Bachelor Thesis}
 \author{Patrik Palenčár}
@@ -28,18 +28,22 @@
 \begin{document}
 	\frontmatter
 	
-	\maketitle
-	\begin{declarations}\end{declarations}
+	%\maketitle
+	%\begin{declarations}\end{declarations}
 	
 	
 	\begin{abstract}
 	
-	This thesis aims to find a way to create a chat bot for live-stream video content by comparing retrieval augmented generation and prompt engineering approaches combined with Large Language Model (LLM). The core objective was to design an effective method to provide relevant context from live-stream to a LLM in real time, using transcribed video captions as the primary input source.
-			
-	During the study, various chunking and retrieval strategies were implemented and evaluated. Multiple configurations were tested across several LLMs, with a particular focus on smaller, cost-efficient models that are better suited for real-time performance.
-		
-	\end{abstract}
+	Integrating AI features into video streaming is particularly challenging when it comes to live-streamed sports matches. This study explores a potential solution for incorporating AI as an engaging feature.
 	
+	This thesis aims to find the best way to create a chatbot for live-stream video content by comparing retrieval augmented generation and prompt engineering approaches combined with Large Language Model (LLM). The core objective was to design an effective method to provide relevant context from live-stream to a LLM in real time, using transcribed video captions as the primary input source.
+			
+	During the study, various chunking and retrieval strategies for retrieval augmented generation approach were implemented and evaluated. Multiple configurations were tested across several LLMs, with a particular focus on smaller, cost-efficient models that are better suited for real-time performance. These were visualized with different plots for good comprehension of the results.
+
+	As results, the study finds the best configuration for the RAG approach and the trade-offs between various factors, such as response generation time and context token length, when comparing retrieval augmented generation and prompt engineering. Both approaches are evaluated across multiple LLMs, and the most suitable model is determined for each. Additionally, the evaluation includes an analysis of cost and proposes a final product configuration.
+
+	\end{abstract}
+		
 	
 	\begin{acknowledgements}
 		This is an \textbf{optional} page. Use your choice of paragraph style for text on this page. Usually, this space is for thanking your supporters and getting emotional about how grateful you are to everyone.  
@@ -62,8 +66,8 @@
 	
 	\chapter{Introduction}
 	Recent advancements in the field of artificial intelligence have unlocked many topics for research. The development of large language models (LLMs), like Generative Pre-trained Transformers (GPT) \cite{radford2018improving}, has made AI the most talked about area in modern information technology. 
-	This thesis explores the application of LLMs in scenarios that need real-time integration of external knowledge, specifically by the use of Retrieval-Augmented Generation (RAG) and prompt engineering. The study will specifically focus on how can we use RAG and prompt engineering with LLMs to create a chat bot capable of communicating about sports video live stream.
-	The key objective is to implement real-time context retrieval to create a chat bot, which will be researched with the aim of developing a state-of-the-art solution. There are several limitations that I might be facing during this research such as the need to provide context in real time without access to future data or any problems that could affect the final chat bot.
+	This thesis explores the application of LLMs in scenarios that need real-time integration of external knowledge, specifically by the use of Retrieval-Augmented Generation (RAG) and prompt engineering. The study will specifically focus on how can we use RAG and prompt engineering with LLMs to create a chatbot capable of communicating about sports video live stream.
+	The key objective is to implement real-time context retrieval to create a chatbot, which will be researched with the aim of developing a state-of-the-art solution. There are several limitations that I might be facing during this research such as the need to provide context in real time without access to future data.
 	
 	
 	\section{Motivation}
@@ -71,20 +75,20 @@
 	
 	Live sports content is fast paced, and viewers often face moments where they are forced to miss short segments of the game due to many different interruptions, such as stepping away from the screen or answering a call. In these situations, being able to ask an intelligent assistant capable of providing truthful and relevant information about the match in real time can significantly improve the overall watching experience. It would make the viewer feel like watching with a friend.
 	
-	Live audience often seek additional information about players, teams, statistics, or specific events occurring during the game. Rather than manually searching through various sources, viewers would benefit from a conversational interface (chat bot) that allows them to ask questions about the match directly while watching. This kind of interaction not only makes it easier for people to get the information they want, but also connects understanding of additional knowledge and watching in a smooth way.
+	Live audience often seek additional information about players, teams, statistics, or specific events occurring during the game. Rather than manually searching through various sources, viewers would benefit from a conversational interface (chatbot) that allows them to ask questions about the match directly while watching. This kind of interaction not only makes it easier for people to get the information they want, but also connects understanding of additional knowledge and watching in a smooth way.
 	
-	This research goes over the practical use case as it contributes to the field of real-time natural language processing and conversational AI. It looks at the integration of Retrieval-Augmented Generation and prompt engineering in a time constrained streaming context, creating something new in comparison to many static LLM use cases. By building and evaluating a chat bot capable of operating on live streamed content, this study aims to explore how modern AI models can be tweaked for time sensitive, dynamic data scenarios.
+	This research goes over the practical use case as it contributes to the field of real-time natural language processing and conversational AI. It looks at the integration of Retrieval-Augmented Generation and prompt engineering in a time constrained streaming context, creating something new in comparison to many static LLM use cases. By building and evaluating a chatbot capable of operating on live streamed content, this study aims to explore how modern AI models can be tweaked for time sensitive, dynamic data scenarios.
 	
-	Lastly, the goal is to build a tool that is both technically useful and easy to use chat bot. Which gives viewers a smarter, and more fun way to follow live stream content.
+	Lastly, the goal is to build a tool that is both technically useful and easy to use chatbot. Which gives viewers a smarter, and more entertaining way to follow live stream content.
 	
 	
 	\section{Research Questions}
 	\begin{itemize}
-		\item How can context from live-stream content be provided to a Large Language Model (LLM) in order to build an accurate chat bot?
+		\item How can context from live-stream content be provided to a Large Language Model (LLM) in order to build an accurate chatbot?
 		\begin{itemize}
-			\item What are the most effective hyperparameters for Retrieval-Augmented Generation and prompt engineering in the context of a live-streaming chat bot?
+			\item What are the most effective hyperparameters for Retrieval-Augmented Generation and prompt engineering in the context of a live-streaming chatbot?
 		\end{itemize}
-		\item How does Retrieval-Augmented Generation compare with prompt engineering in optimizing the chat bot’s performance for live video stream applications?
+		\item How does Retrieval-Augmented Generation compare with prompt engineering in optimizing the chatbot’s performance for live video stream applications?
 		\begin{itemize}
 			\item What are effective methods to evaluate and compare the performance of RAG and prompt engineering in this use case?
 		\end{itemize}
@@ -94,15 +98,15 @@
 	
 	
 	\section{Research Method}
-	My research aims to explore techniques for providing context to LLM for live video streaming content to create a chat bot.
+	My research aims to explore techniques for providing context to LLM for live video streaming content to create a chatbot.
 	For this kind of topic quantitative research method will be used. With this approach, I can conclude that findings of the study are based on objective and measurable outcomes. 
 	
 	The data used for the research, consists of commentary captions from replays of live sports games, simulating real data flow. Technique to get these data is a speech to text technology that converts the live stream commentary to text in real time.
 	
-	Next, to answer the research questions, the study will focus on how to evaluate the chat bot as accurately as possible. For this, it will examine different objective evaluation methods, such as statistical comparisons of system performance or ground truth analysis \cite{chen2023prompt}.
+	Next, to answer the research questions, the study will focus on how to evaluate the chatbot as accurately as possible. For this, it will examine different objective evaluation methods, such as statistical comparisons of system performance or ground truth analysis \cite{chen2023prompt}.
 	It will create a solid ground for comprehensive analysis between RAG and prompt engineering approach. And it will also help determine which approach is most suitable for the use case. 
 	
-	After the best-performing parameters for the chat bot are researched with LLM GPT-4o-mini \cite{openai2023gpt4}. Its performance will be further evaluated using an additional LLM. These LLMs will be chosen based on current LLM benchmarks for the informational chat bot LLMs. Important measures for choosing a LLM for this use case will be further researched in upcoming chapters. The responses generated by both LLMs and the two approaches will then be analyzed and compared in contingency tables as shown in Figure~\ref{fig:ragvspe}.
+	After the best-performing parameters for the chatbot are researched with LLM GPT-4o-mini \cite{openai2023gpt4}. Its performance will be further evaluated using an additional LLM. These LLMs will be chosen based on current LLM benchmarks for the informational chatbot LLMs. Important measures for choosing a LLM for this use case will be further researched in upcoming chapters. The responses generated by both LLMs and the two approaches will then be analyzed and compared in contingency tables as shown in Figure~\ref{fig:ragvspe}.
 	
 	Lastly, the thesis will address the best approach to implementing live-rag as a service that can be used by other developers. To achieve this, a server with different APIs will need to be built.
 	
@@ -115,29 +119,30 @@
 	\end{figure}
 	
 	
-	\section{Thesis Structure}
-	This thesis is divided into several parts to guide the reader from background knowledge to the final evaluation of the chat bot.
-	
-	The structure of this thesis begins with an explanation of needed technologies such as Large Languafe Models (LLM's), Retrieval-Augmented Generation (RAG), and prompt engineering.
-	
-	Then, the thesis takes a closer look at the parts that were needed for working with live-stream content. This includes how live video captions are handled, how text is prepared and divided, and how the chat bot finds the right information from the context.
-	
-	After the background and technical explanation, the thesis continues with the step-by-step process of building the chat bot. This includes details about the tools and methods used, and how they were put together to create a working system. It shows how the live data is received, processed, and turned into answers by the chat bot.
-	
-	In the last part, the chat bot is evaluated and its performance is measured. The results from using RAG and prompt engineering are compared, and the best options for the live-stream chat bot are discussed. This will help answer the research questions.
-	The thesis ends with discussion and by talking about what could be improved and what future work can be done.
-	
-	
-	\chapter{Background}
-	The field of AI is currently one of the most active in research advancements, and new scientific papers are being released daily.
-	This chapter introduces the technologies essential for the research and explains why they are important for this study. 
-	
-	
 	\section{Related Technologies}
 	The technologies used in the research will include the Python programming language, specifically the open-source library LangChain, which is designed for working with Large Language Models (LLMs). Furthermore, two different LLMs will be used and compared in the research. 
 	To implement the result of the research as a service, the study will use another Python library, Flask, to create the server.
 	For evaluation purposes, this thesis will leverage the Ragas Python library, which is specifically designed for evaluating Retrieval-Augmented Generation (RAG) pipelines. Lastly, for data visualization will be used Plotly visualization library with Seaborn for modern looking visualizations.
 	
+	
+	\section{Thesis Structure}
+	This thesis is divided into several parts to guide the reader from background knowledge to the final evaluation of the chatbot.
+	
+	The structure of this thesis begins with an explanation of needed technologies such as Large Languafe Models (LLM's), Retrieval-Augmented Generation (RAG), and prompt engineering.
+	
+	Then, the thesis takes a closer look at the parts that were needed for working with live-stream content. This includes how live video captions are handled, how text is prepared and divided, and how the chatbot finds the right information from the context.
+	
+	After the background and technical explanation, the thesis continues with the step-by-step process of building the chatbot. This includes details about the tools and methods used, and how they were put together to create a working system. It shows how the live data is received, processed, and turned into answers by the chatbot.
+	
+	In the last part, the chatbot is evaluated and its performance is measured. The results from using RAG and prompt engineering are compared, and the best options for the live-stream chatbot are discussed. This will help answer the research questions.
+	The thesis ends with discussion and by outlining what could be improved and what future work can be done.
+	
+	
+	
+	\chapter{Background}
+	The field of AI is currently one of the most active in research advancements, and new scientific papers are being released daily.
+	This chapter introduces the technologies essential for the research and explains why they are important for this study. 
+
 
 	\section{Transformers}
 	Understanding the transformer architecture is needed in the context of this research, as the study relies on models built with this technique.
@@ -156,35 +161,45 @@
 	\end{figure}
 	One problem with self attention is that it does not care about the order of the words in the sentence. Therefore a key innovation of transformers is the use of \textit{positional encoding}, which provides information about the position of words in the sequence. This allows the model to maintain an understanding of word order.
 	
-	Transformers have become the foundation for many state of the art models in NLP, such as image processing, speech recognition, and protein folding. Their modularity, scalability, and ability to generalize across tasks have made them a base of modern AI systems.
+	Transformers have become the foundation for many state of the art models in NLP, such as image processing \cite{dosovitskiy2020vit}, speech recognition \cite{baevski2020wav2vec}, and protein folding \cite{jumper2021alphafold}. Their modularity, scalability, and ability to generalize across tasks have made them a base of modern AI systems.
 	
 	
 	\subsection{Large Language Models}
 	\label{sec:LLM}
 	
-	The invention of transformers enabled the creation of transformer based LLMs which are also used in my thesis. These models are trained on a huge amount of text data, from which LLMs learn to understand and generate human language. Thanks to the transformer architecture, LLMs are faster and more accurate than older models. Thanks to this, many new use cases started to appear, including the topic of this study.
+	A major turning point in natural language processing came with the paper Attention is All You Need by Vaswani et al. in 2017 \cite{vaswani2017attention}. In this paper, the authors introduced the transformer architecture, which replaced older methods like RNNs and LSTMs. The big idea was that instead of processing words in sequence, transformers look at all words at once using something called self-attention. This allows them to better understand the full meaning of a sentence or paragraph and handle longer-range dependencies.
+	
+	Thanks to this new architecture, models could be trained much faster and could handle much more data. This also set the foundation for the large language models we use today. Without transformers, modern systems like GPT or Claude wouldn't exist.
+	
+	
+
+	Based on the transformer architecture, OpenAI introduced GPT (Generative Pre-trained Transformer) \cite{radford2018improving} 2018, starting with GPT-1 in 2018. Over time, each version grew bigger and more capable. The latest, GPT-4 \cite{openai2023gpt4}, can understand and generate high-quality language in many domains. GPT models are trained in two main steps: first on huge amounts of text (pre-training), and then fine-tuned on more specific tasks (like answering questions or summarizing text).
+	
+	GPT models are also autoregressive, which means they generate one word at a time by predicting the next most likely word, making them great at continuing conversations or writing responses. Because of this structure, GPT models are widely used in chatbots and other LLM applications today.
+	
+	These models are trained on a huge amount of text data, from which LLMs learn to understand and generate human language. Thanks to the transformer architecture, LLMs are faster and more accurate than older models. Thanks to this, many new use cases started to appear, including the topic of this study.
 	
 	LLMs are trained by showing them lots of examples of human text. Out of this text the model learns how words and sentences are usually built. The results of this training are saved in the form of model parameters, which are just numbers that help the model decide what word to generate next. The more parameters a model has, the more information it can store and use and it also needs more computing power to run.
 	
 	\vspace{0.2cm}
 	\noindent\textbf{Model size:}  
-	LLMs can have from millions to even hundreds of billions of parameters. For example, GPT-2 has 1.5 billion parameters, while GPT-4 is believed to 1.7 trilion parameters. A bigger model usually gives better results, but it is also more expensive and slower to use.
+	LLMs can have from millions to even hundreds of billions of parameters. For example, GPT-2 has 1.5 billion parameters, while GPT-4 is believed to 1.7 trilion parameters \cite{radford2019language}. A bigger model usually gives better results, but it is also more expensive and slower to use.
 	
 	\vspace{0.2cm}
 	\noindent\textbf{Model specialization:}  
-	The running cost of LLM gets higher as the vague LLMs get more parameters. There are therefore many LLMs that are trained for specific tasks like solving math problems, writing code, or working with images. Since this research is focused on text, the model used must be good at language understanding and generation. So the model must be specialized for text-based tasks like chatbots, summarization, or question answering. Additionally, the LLM used for this study should be smaller and efficient, even if it is not as smart as a big, slow one.
+	The running cost of LLM gets higher as the vague LLMs get more parameters. There are therefore many LLMs that are trained for specific tasks like solving math problems \cite{lewkowycz2022solving}, writing code \cite{chen2021evaluating}, or working with images \cite{radford2021learning}. Since this research is focused on textual data, the model used must be good at language understanding and generation. So the model must be specialized for text-based tasks like chatbots or question answering. Additionally, the LLM used for this study should be smaller and efficient, even if it is not as accurate as a big, slow one.
 	
 	\vspace{0.2cm}
 	\noindent\textbf{Tokenization:}  
-	LLMs do not read text word by word like humans. Instead, they split the text into smaller parts called tokens. A token can be a word, part of the wort or just a letter. The model understands and processes everything using these tokens. Understanding tokenization is useful when you want to know how much text can fit into the context window or how much the model will cost to run.
+	LLMs do not read text word by word like humans. Instead, they split the text into smaller parts called tokens. A token can be a word, part of the wort or just a letter. The model understands and processes everything using these tokens. Understanding tokenization is useful when the goal is to know how much text can fit into the context window or how much the model will cost to run.
 	
 	\vspace{0.2cm}
 	\noindent\textbf{Context window:}  
-	One important parameter of LLMs is the size of their context window. This shows how much text the model can process at once. The more context is provided to the LLM the better responses it tends to give. But this also makes the LLM slower to process the context. A large context window is important for the prompt engineering approach of this research as we need the LLM to process massive prompt. Good thing is that the most of the newest LLMs have big context windows of 100 000 tokens and more.
+	One important parameter of LLMs is the size of their context window. This shows how much text the model can process at once. The more context is provided to the LLM the better responses it tends to give. But this also makes the LLM slower to process the context. A large context window is important for the prompt engineering approach of this research as we need the LLM to process massive prompt. Fortunately, most of the newest LLMs have big context windows of 100 000 tokens and more.
 	
 	\vspace{0.2cm}
 	\noindent\textbf{Temperature:}  
-	The next parameter of the LLM is temperature. This setting controls how random and creative the model's answers are. A lower temperature (like 0.1 or 0.2) makes the model give more safe and focused answers. A higher temperature (like 0.8 or 1.0) makes the model more creative, but it can also start making things up and hallucinate. In this research, the chat bot needs to stay close to facts, so lower temperature settings are more useful.
+	The next parameter of the LLM is temperature. This setting controls how random and creative the model's answers are. A lower temperature (like 0.1 or 0.2) makes the model give more safe and focused answers. A higher temperature (like 0.8 or 1.0) makes the model more creative, but it can also start making things up and hallucinate. In this research, the chatbot needs to stay close to facts, so lower temperature settings are more useful.
 	
 
 	\vspace{0.2cm}
@@ -192,18 +207,33 @@
 	Most public LLMs (like GPT models from OpenAI) are not free. They charge users based on the number of tokens used. For example, asking a very long question or giving a lot of tokens context costs more than asking something short. Also, different models have different token prices depending on their size and quality. This is important when deciding which model to use in production or for experiments.
 	
 
-	\section{Chat Bots}
+	\section{Chatbots}
 	
-	Chat bots are computer programs designed to simulate conversation with human users. They are used in many areas today, from customer support to personal assistants or helping users interact with websites or apps. A chat bot usually understands what the user writes and tries to respond in a helpful way.
+	The idea of chatbots and artificial intelligence was first mentioned by Alan Turing in 1950. He asked a question if a computer program can 'think' and artificially reply in a human like way. This was called the Turing test \cite{turing1950computing}.
 	
-	Traditionally, many chat bots are so called straightforward chat bots. This means the LLM used for the chat bot receives just the user's message (query) together with a small text prompt called a context prompt. A context prompt includes written instructions or rules that help guide the LLM on how to answer. These prompts can include things like tone, personality, or specific information about the topic. They are often improved using a technique called prompt engineering \cite{chen2023prompt}. Which means carefully designing the prompt to get better answers from the LLM.
+	The first form of a chatbot, called ELIZA appeared in the years 1964 and 1966 \cite{zemcik2024history}. It was designed to act as a psychotherapist. Since the hardware back then was very limited the technology behind this chatbot was simple. ELIZA worked on identifying keywords in user input, matching them to pre-programmed patterns, and generating responses by rephrasing the input. This gave an illusion of understanding, even though it had no real idea what the user was writing  \cite{berry2024limits}.
 	
-	However, there are some limits to this straightforward approach. These chat bots can only work well if all the information they need is already in the model or the prompt. If they need to answer based on data that changes often or is not known in advance (like live sports commentary), this approach becomes difficult.
+	Later in 1988, another chatbot called Jabberwacky was developed. It was one of the first bots to use some form of artificial intelligence. It worked by remembering past conversations and trying to respond with context based on them. Still, it was far from perfect and often gave slow or incorrect answers \cite{adamopoulou2020chatbots}.
 	
-	This thesis focuses on developing a chat bot that goes beyond the basic "straight forward" method. To handle more complex or dynamic information, one more step of retrieval-augmented generation (RAG) or advanced prompt engineering techniques is added. With RAG, the chat bot can first look up information from external sources, then use the information (called context) to answer the user's question. This makes the chat bot more flexible and useful for live-stream use cases. More about how RAG work is described in the next section.
+	
+	These chatbots improved as the years went by, and they started to be used as a real world products by companies. Around 2001, chatbots were built into messaging platforms and used for things like customer support, where they helped users by pulling answers from a database. Then, in the early 2010s, big tech companies introduced voice assistants like Siri, Google Assistant, and Alexa. These voice-based chatbots used speech recognition and web services to answer basic questions \cite{bellegarda2013siri}. Over time, these assistants became smarter thanks to natural language processing, artificial intelligence, and even on-device learning \cite{apple2023siri}.
+	
+	However, these earlier voice assistants still lacked deeper understanding. In the context of live video streaming, creating such a chatbot wouldn't be possible with these technologies, because the content of a livestream is unpredictable. This all started to change with the introduction of transformers, a new model architecture introduced in the paper Attention is All You Need \cite{vaswani2017attention}. Transformers made a huge difference in how machines understand and generate language. They became the building blocks for today’s Large Language Models (LLMs), which are the core of modern chatbot systems like ChatGPT.
+	
+	These improvements opened the door to more intelligent and flexible chatbots,especially those that can work with external knowledge using techniques like Retrieval-Augmented Generation (RAG). That shift from static, rule-based bots to context aware, real-time LLMs is what made projects like this thesis possible.
+	
+	
+	As mentioned before the chatbots are used in many areas today, from customer support to personal assistants or helping users interact with websites or apps \cite{adamopoulou2020chatbots}. A chatbot usually understands what the user writes and tries to respond in a helpful way.
+	
+	Traditionally, many chatbots are so called straightforward chatbots. This means the LLM used for the chatbot receives just the user's message (query) together with a small text prompt called a context prompt. A context prompt includes written instructions or rules that help guide the LLM on how to answer. These prompts can include things like tone, personality, or specific information about the topic. They are often improved using a technique called prompt engineering \cite{chen2023prompt}. Which means carefully designing the prompt to get better answers from the LLM.
+	
+	However, there are some limits to this straightforward approach. These chatbots can only work well if all the information they need is already in the model or the prompt. If they need to answer based on data that changes often or is not known in advance (like live sports commentary), this approach becomes difficult.
+	
+	This thesis focuses on developing a chatbot that goes beyond the basic "straight forward" method. To handle more complex or dynamic information, one more step of retrieval-augmented generation (RAG) or advanced prompt engineering techniques is added. With RAG, the chatbot can first look up information from external sources, then use the information (called context) to answer the user's question. This makes the chatbot more flexible and useful for live-stream use cases. More about how RAG work is described in the next section.
 	
 	
 	\section{Retrieval-Augmented Generation}
+	
 	The Retrieval-Augmented Generation (RAG) introduced in \cite{lewis2020retrieval}, is a process that enhances responses of LLMs by providing custom context. Through RAG, LLMs can effectively use specific data that may not be publicly accessible or that the model was not initially trained on.   
 	Common data for RAG use cases are for example confidential data in a company or dynamically updated data — such as the data used in this thesis. This allows LLMs to generate responses with contextually relevant information to specific use cases.
 	By augmenting the input with relevant external information, RAG strengthens the LLM’s understanding and reduces the inaccuracies or irrelevant outputs, commonly known as “hallucinations”. These might otherwise occur without contextual guidance.
@@ -216,7 +246,7 @@
 	
 	\noindent\textbf{Generation} – giving this information to the LLM along with the user’s query so that it can generate a more accurate answer.
 	
-	This creates a dynamic system that instead of using only the model’s pre-trained knowledge becomes more like a smart assistant that looks something up before answering. Because of this, RAG is very useful in real-time applications like the live sports chat bot researched in this thesis.
+	This creates a dynamic system that instead of using only the model’s pre-trained knowledge becomes more like a smart assistant that looks something up before answering. Because of this, RAG is very useful in real-time applications like the live sports chatbot researched in this thesis.
 	
 	To make this work, the external information (such as transcripts or documents) needs to be prepared in a special way. This process includes three key steps:
 	
@@ -261,33 +291,33 @@
 	
 	There are different retrieval methods to chose from. The selection of the right retrieval method depends on the data and the use case. 
 	
-	In this thesis, similarity search is used for the retrieval part of RAG. This method compares the meaning of the user query with the meaning of the stored text chunks. It finds the chunks that are most similar to the question and sends them to the LLM as context for answering.
+	In this thesis, similarity search is used for the retrieval part of RAG \cite{lewis2020retrieval}. This method compares the meaning of the user query with the meaning of the stored text chunks. It finds the chunks that are most similar to the question and sends them to the LLM as context for answering.
 	
 	Similarity search works by comparing vector embeddings. Both the query and the text chunks are turned into vectors using an embedding model. These vectors are then compared using a similarity metric, such as cosine similarity. The more similar the vectors, the more relevant the chunk is to the query.
 	
-	This method is especially useful when the question and the text do not use the exact same words but still talk about the same topic. This is common in natural language and makes similarity search better than simple keyword matching.
+	This method is especially useful when the question and the text do not use the exact same words but still handle the same topic. This is common in natural language and makes similarity search better than simple keyword matching.
 	
 	Also, retrieval is usually the step where ranking happens. The selected chunks are ordered based on how relevant they are to the question. This ranking plays a big role in the quality of the final answer, as the LLM receives only a limited number of top-ranked chunks due to the context window size.
 	
 	
 	\section{Prompt Engineering}
 	
-	As different LLM-powered agents and chat bots began to appear, the need to navigate and customize their responses was increasingly needed. LLMs, particularly earlier versions, often produced outputs that were vague, generic, or factually inaccurate \cite{nvidia2024facts}. To minimize these issues and improve the quality of generated responses, researchers introduced techniques now known as prompt engineering techniques.
+	As different LLM-powered agents and chatbots began to appear, the need to navigate and customize their responses was increasingly needed. LLMs, particularly earlier versions, often produced outputs that were vague, generic, or factually inaccurate \cite{nvidia2024facts}. To minimize these issues and improve the quality of generated responses, researchers introduced techniques now known as prompt engineering techniques.
 	
 	Prompt engineering is the process of designing and optimizing the input prompts given to an LLM, in order to have its output in a desired way. This includes not only the writing of the query itself but also additional instructions or contextual information that can influence how the model interprets the task.
 	
-	As discussed in \cite{chen2023prompt}, there are numerous prompt engineering strategies. These techniques sound simple and straightforward, but they are effective. Some of these are: rephrasing the prompt for clarity, explicitly stating the desired format of the response, assigning the LLM a specific role (e.g., "Act as a sports analyst"), or using techniques like resampling to generate multiple outputs and choose the best one. More advanced approaches may also involve few-shot prompting, chain-of-thought prompting, or the use of external tools for dynamic prompt generation.
+	As discussed in \cite{chen2023prompt}, there are numerous prompt engineering strategies. These techniques sound simple and straightforward, but they are effective. Some of these are: rephrasing the prompt for clarity, explicitly stating the desired format of the response, assigning the LLM a specific role (e.g., "Act as a sports analyst"), or using techniques like resampling to generate multiple outputs and choose the best one. More advanced approaches may also involve few-shot prompting \cite{brown2020language}, chain-of-thought prompting \cite{wei2022chain}, or the use of external tools for dynamic prompt generation\cite{mialon2023augmented}.
 	
-	In this thesis, prompt engineering is an essential part of guiding the chatbot’s behavior, especially in combination with retrieved context from the RAG process. Since the effectiveness of an LLM can be heavily influenced by the way it is prompted. A careful prompt design has a crucial role in securing that the chat bot’s responses are relevant and accurate.
+	In this thesis, prompt engineering is an essential part of guiding the chatbot’s behavior, especially in combination with retrieved context from the RAG process. Since the effectiveness of an LLM can be heavily influenced by the way it is prompted. A careful prompt design has a crucial role in securing that the chatbot’s responses are relevant and accurate.
 	
 	
 	\section{Evaluation}
 	\label{sec:background_evaluation}
-	To assure the quality and reliability of the chat bot developed in this thesis, a powerful and systematic evaluation framework is needed. Without clearly defined evaluation metrics, it would be difficult to objectively assess whether the system meets its intended goals, such as providing accurate, contextually relevant, and trustworthy answers. Evaluation enables both the identification of system strengths and the exposure of weaknesses.
+	To assure the quality and reliability of the chatbot developed in this thesis, a powerful and systematic evaluation framework is needed. Without clearly defined evaluation metrics, it would be difficult to objectively assess whether the system meets its intended goals, such as providing accurate, contextually relevant, and trustworthy answers. Evaluation enables both the identification of system strengths and the exposure of weaknesses.
 	
-	There are several approaches to evaluating a chat bot, from subjective manual human annotation to automated objective metrics based on language similarity or information retrieval performance. Since this thesis focuses on a chat bot built using Retrieval-Augmented Generation (RAG), the evaluation is structured around both the generation and retrieval components. The selected evaluation metrics align with the key goals of such a system: retrieving meaningful context, generating faithful and relevant answers, and minimizing hallucinations.
+	There are several approaches to evaluating a chatbot, from subjective manual human annotation to automated objective metrics based on language similarity or information retrieval performance. Since this thesis focuses on a chatbot built using Retrieval-Augmented Generation (RAG), the evaluation is structured around both the generation and retrieval components. The selected evaluation metrics align with the key goals of such a system: retrieving meaningful context, generating faithful and relevant answers, and minimizing hallucinations.
 	
-	To be able to create results with all these metrics there is need for some data to compare the RAG outputs. For this it is possible to create so called "Ground Truth Question-Answer Pairs". These represent the truthful standard against which the RAG system's outputs can be compared. Ground truth QA pairs serve two primary purposes: they provide a reliable benchmark for evaluating the result metrics of the chat bot’s responses, and they help identify weaknesses in both retrieval and generation.
+	To be able to create results with all these metrics there is need for some data to compare the RAG outputs. For this it is possible to create so called "Ground Truth Question-Answer Pairs". These represent the truthful standard against which the RAG system's outputs can be compared. Ground truth QA pairs serve two primary purposes: they provide a reliable benchmark for evaluating the result metrics of the chatbot’s responses, and they help identify weaknesses in both retrieval and generation.
 	
 	In the context of this thesis, ground truth QA pairs are especially important for assessing the semantic similarity and answer relevancy of the system-generated responses. Without them, it would be difficult to perform objective, repeatable, and meaningful evaluations.
 	
@@ -325,7 +355,7 @@
 	Context retrieval evaluation looks specifically at how effective the retriever is in selecting the most appropriate documents. This can be measured using numbers (like recall or precision), or by looking at what was retrieved and comparing it to the ideal context that was prepared in advance.
 	
 	\subsection{Semantic Similarity}
-	Semantic similarity measures how close the meaning of the generated answer is to a ground truth answer. This is often computed using embedding based similarity scores (cosine similarity using sentence embeddings). It is not always perfect, but it provides an automated way to approximate answer quality.
+	Semantic similarity measures how close the meaning of the generated answer is to a ground truth answer. This is often computed using embedding based similarity scores (cosine similarity using sentence embeddings). It’s not always perfect because the model might say something that sounds similar but has a different meaning or is not actually correct. But it provides an automated way to approximate answer quality.
 
 	
 	
@@ -337,35 +367,8 @@
 	
 	
 	\section{Academic Research}
-	Since the topic of the thesis consists of multiple connected parts, it's helpful to explore key research papers that contribute to the understanding of each part.
-
+	Since the topic of the thesis consists of multiple connected main parts, it's helpful to explore key research papers that contribute to the understanding of each part.
 	
-	\subsection{Chat bots}
-	The idea of chat bots and artificial intelligence was first mentioned by Alan Turing in 1950. He asked a question if a computer program can 'think' and artificially reply in a human like way. This was called the Turing test \cite{turing1950computing}.
-	
-	The first form of a chat bot, called ELIZA appeared in the years 1964 and 1966 \cite{zemcik2024history}. It was designed to act as a psychotherapist. Since the hardware back then was very limited the technology behind this chat bot was simple. ELIZA worked on identifying keywords in user input, matching them to pre-programmed patterns, and generating responses by rephrasing the input. This gave an illusion of understanding, even though it had no real idea what the user was writing  \cite{berry2024limits}.
-	
-	Later in 1988, another chat bot called Jabberwacky was developed. It was one of the first bots to use some form of artificial intelligence. It worked by remembering past conversations and trying to respond with context based on them. Still, it was far from perfect and often gave slow or incorrect answers \cite{adamopoulou2020chatbots}.
-	
-	
-	These chat bots improved as the years went by, and they started to be used as a real world products by companies. . Around 2001, chat bots were built into messaging platforms and used for things like customer support, where they helped users by pulling answers from a database. Then, in the early 2010s, big tech companies introduced voice assistants like Siri, Google Assistant, and Alexa. These voice-based chat bots used speech recognition and web services to answer basic questions \cite{bellegarda2013siri}. Over time, these assistants became smarter thanks to natural language processing, artificial intelligence, and even on-device learning \cite{apple2023siri}.
-	
-	However, these earlier voice assistants still lacked deeper understanding. In the context of live video streaming, creating such a chat bot wouldn't be possible with these technologies, because the content of a livestream is unpredictable. This all started to change with the introduction of transformers, a new model architecture introduced in the paper Attention is All You Need \cite{vaswani2017attention}. Transformers made a huge difference in how machines understand and generate language. They became the building blocks for today’s Large Language Models (LLMs), which are the core of modern chat bot systems like ChatGPT.
-	
-	These improvements opened the door to more intelligent and flexible chat bots,especially those that can work with external knowledge using techniques like Retrieval-Augmented Generation (RAG). That shift from static, rule-based bots to context aware, real-time LLMs is what made projects like this thesis possible.
-	
-	
-	\subsection{Attention is All You Need}
-	A major turning point in natural language processing came with the paper Attention is All You Need by Vaswani et al. in 2017 \cite{vaswani2017attention}. In this paper, the authors introduced the transformer architecture, which replaced older methods like RNNs and LSTMs. The big idea was that instead of processing words in sequence, transformers look at all words at once using something called self-attention. This allows them to better understand the full meaning of a sentence or paragraph and handle longer-range dependencies.
-	
-	Thanks to this new architecture, models could be trained much faster and could handle much more data. This also set the foundation for the large language models we use today. Without transformers, modern systems like GPT or Claude wouldn't exist.
-	
-	
-	\subsection{GPT – Generative Pre-trained Transformer}
-	Based on the transformer architecture, OpenAI introduced GPT (Generative Pre-trained Transformer) \cite{radford2018improving} 2018, starting with GPT-1 in 2018. Over time, each version grew bigger and more capable. The latest, GPT-4 \cite{openai2023gpt4}, can understand and generate high-quality language in many domains. GPT models are trained in two main steps: first on huge amounts of text (pre-training), and then fine-tuned on more specific tasks (like answering questions or summarizing text).
-	
-	GPT models are also autoregressive, which means they generate one word at a time by predicting the next most likely word, making them great at continuing conversations or writing responses. Because of this structure, GPT models are widely used in chatbots and other LLM applications today.
-
 
 	\subsection{Retrieval Augmented Generation}
 	Even though GPT and similar models are strong, they still have a problem: they don’t know about new information after their training cutoff and can "hallucinate" facts. To solve this, the paper Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks by Lewis et al. (2020) proposed a method called RAG \cite{lewis2020retrieval}.
@@ -376,40 +379,54 @@
 
 
 	The paper \cite{chen2023prompt} provides a detailed analysis of prompt engineering techniques, which are critical for customizing the responses of LLMs. It explores different strategies for constructing prompts, optimizing their structure, and adapting them to improve LLM performance. This is relevant to this thesis, as effective prompt engineering is needed for creating an intelligent live RAG chatbot. The insights from this paper can help customize the structure of prompts to deliver accurate responses.
-
+	
+	Another useful resource is the work *Dense Passage Retrieval for Open-Domain Question Answering* \cite{karpukhin2020dense}. It introduces Dense Passage Retrieval (DPR), which became a foundational retrieval technique used in early RAG systems. Its approach to learning effective question and passage embeddings remains relevant today, especially for improving retrieval precision in chatbot pipelines.
 
 
 	\subsection{Prompt Engineering}
-	As LLMs got better, people realized that how you give them the information, how you "prompt" them, makes a huge difference. This led to a new field called prompt engineering. The paper \cite{chen2023prompt} provides a detailed analysis of prompt engineering techniques, which are critical for customizing the responses of LLMs. It explores different strategies for constructing prompts, optimizing their structure, and adapting them to improve LLM performance. This is relevant to this thesis, as effective prompt engineering is needed for creating an intelligent live RAG chat bot. The insights from this paper can help customize the structure of prompts to deliver accurate responses.
+	As LLMs got better, people realized that how you give them the information, how you "prompt" them, makes a huge difference. This led to a new field called prompt engineering. The paper \cite{chen2023prompt} provides a detailed analysis of prompt engineering techniques, which are critical for customizing the responses of LLMs. It explores different strategies for constructing prompts, optimizing their structure, and adapting them to improve LLM performance. This is relevant to this thesis, as effective prompt engineering is needed for creating an intelligent live RAG chatbot. The insights from this paper can help customize the structure of prompts to deliver accurate responses.
+	
+	Several other works have investigated prompt engineering in similar contexts. For example, \cite{liu2023pre} introduced a taxonomy of prompting methods and evaluated their effectiveness across a wide range of tasks. This helped identify which types of prompts are more robust for general-purpose reasoning, which is valuable when designing flexible prompt templates for real-time systems.
+	
+	The study by \cite{zhou2022least} explored least-to-most prompting, a method for decomposing complex tasks into simpler steps within the prompt. Although developed for reasoning problems, this hierarchical prompt construction can inspire ways to include structured, hierarchical game context when interacting with LLMs in streaming environments.
+	
+	Additionally, \cite{kojima2022large} demonstrated that even zero-shot prompting with carefully crafted instructions could enable large models to perform multi-step reasoning. This highlights the importance of verbal instruction design, which is directly relevant when crafting prompts that guide the chatbot’s behavior based on dynamically changing video caption inputs.
+	
+	Finally, the paper \cite{reynolds2021prompt} outlines best practices for few-shot prompt design, and discusses common pitfalls and strategies for effective formatting, which were helpful during the iterative process of refining prompt templates in this project.
+	
+	Together, these works form the foundation for understanding and applying prompt engineering techniques in this thesis.
 	
 	
 	\subsection{RAG Evaluation}
 	Finally, since RAG systems combine both search and generation, evaluating them is more complicated. In the paper RAGAs: Evaluating Open-Domain Question Answering with Faithfulness and Factuality by Shuster \cite{shuster2023ragas}, the authors propose a framework called RAGAs that focuses on different parts of the pipeline, like whether the retrieval step gets useful documents, whether the response is faithful to that context, and whether it actually answers the question.
 	
 	One key challenge in this area is having good ground truth Q and A pairs and reference contexts to compare the model’s output against. Without these, it’s hard to say if the system is doing a good job or just sounding smart. The paper also talks about automating these evaluations to scale them across datasets.
+	
+	Another important work is *TRUE: Re-evaluating Factual Consistency Evaluation* by Honovich et al. \cite{honovich2022true}, which presents a benchmark to test how well existing factuality metrics perform across different tasks. It shows that current automatic evaluation metrics often fail to capture factual consistency and proposes better evaluation strategy. This is relevant to this thesis, where factual correctness of the chatbot’s answers is crucial.
 
 
 	\section{State of Practice}
-	There is currently no chat bot for live-stream video content in practice. Although chat bots created by combining LLM with RAG or prompt engineering approach are currently widely applied across various domains.
+	There is currently no chatbot for live-stream video content in practice. Although chatbots created by combining LLM with RAG or prompt engineering approach are currently widely applied across various domains.
 	
-	Firstly, chat bots are used in customer support, where they improve efficiency and reduce the need for human employees \cite{reddy2021customer}. For example, in eToro,\footnote{eToro is an investing broker platform where users can invest in stocks, commodities, and more. Further details at: \url{https://www.etoro.com}} uses customer support chat bot that provides guidance on functionalities of the platform and financial regulations for different countries.
+	Firstly, chatbots are used in customer support, where they improve efficiency and reduce the need for human employees \cite{reddy2021customer}. For example, in eToro,\footnote{eToro is an investing broker platform where users can invest in stocks, commodities, and more. Further details at: \url{https://www.etoro.com}} uses customer support chatbot that provides guidance on functionalities of the platform and financial regulations for different countries.
 	
-	Secondly, chat bots are used in education. They provide personalized learning by retrieving data consisting of course materials from different study fields. Applications can interactively explain topics or give exercises for the student with these data. An example is the Duolingo Lily chat bot \footnote{ Duolingo is a language learning platform with many languages.\\\url{https://blog.duolingo.com/duolingo-chatbots/} for more information.}, which engages users in conversations to improve their language skills. Lily’s conversational approach makes learning fun and interactive while helping users practice and retain knowledge.
+	Secondly, chatbots are used in education. They provide personalized learning by retrieving data consisting of course materials from different study fields. Applications can interactively explain topics or give exercises for the student with these data. An example is the Duolingo Lily chatbot \footnote{ Duolingo is a language learning platform with many languages.\\\url{https://blog.duolingo.com/duolingo-chatbots/} for more information.}, which engages users in conversations to improve their language skills. Lily’s conversational approach makes learning fun and interactive while helping users practice and retain knowledge.
 	
-	Furthermore, they are applied in healthcare to help patients by accessing medical databases and retrieving accurate and relevant information. For example, Babylon Health\footnote{Babylon Health a digital health service that uses artificial intelligence to provide medical consultations \url{https://www.babylonhealth.com/uk} for more details.} provides a chat bot that offers personalized medical consultations based on patient input. The chat bot evaluates symptoms and offer possible diagnoses, it helping patients understand their condition and determine when to seek professional medical advice.
+	Furthermore, they are applied in healthcare to help patients by accessing medical databases and retrieving accurate and relevant information. For example, Babylon Health\footnote{Babylon Health a digital health service that uses artificial intelligence to provide medical consultations \url{https://www.babylonhealth.com/uk} for more details.} provides a chatbot that offers personalized medical consultations based on patient input. The chatbot evaluates symptoms and offer possible diagnoses, it helping patients understand their condition and determine when to seek professional medical advice.
 	
 	Lastly, the thesis topic has potential for real-world application, as it is being researched in collaboration with the video stream solutions company Bitmovin.
 	
 	\section{State of the Art}
-	Currently, there is no state of the art solution specifically for live-RAG chat bots. However, advanced document-based chat bots have been already studied. For example, dynamic RAG has been explored in different applications, such as the approach described in \cite{su2023dragin}. It focuses on adapting retrieval and generation processes dynamically based on the needs of large language models.
+	Currently, there is no state of the art solution specifically for live-RAG chatbots. However, advanced document-based chatbots have been already studied. For example, dynamic RAG has been explored in different applications, such as the approach described in \cite{su2023dragin}. It focuses on adapting retrieval and generation processes dynamically based on the needs of large language models.
+	
 	
 	
 	\chapter{Methodology}
-	This chapter presents the practical implementation of the proposed research. It writes about a detailed description of the technical choices, system design, development process and evaluation. It begins with the selection of right software tools and programming languages used for the projects’s development. This is followed by a explanation of the system architecture, which illustrates how the components interact with one another through data flow mechanisms and API endpoints.
+	This chapter presents the practical implementation of the proposed research. It provides a detailed description of the technical choices, system design, development process and evaluation. It begins with the selection of right software tools and programming languages used for the projects’s development. This is followed by a explanation of the system architecture, which illustrates how the components interact with one another through data flow mechanisms and API endpoints.
 	
 	Next, it will be described how are the data handled, collected, preprocessed, and managed to support efficient processing. Backend development is discussed with a focus on the programming language and frameworks in the language used for implementation. Next, the chunking strategy is explained, detailing how documents are divided into smaller units to support retrieval-augmented generation. The embedding step covers how these chunks are transformed into vector representations using a suitable embedding model and different models are introduced as well.
 	
-	Continuing with explanation of response generation where is shown how did I implemented the system so the relevant chunks are used to generate meaningful and context aware responses. Finally, the chapter concludes with a discussion of the evaluation process and visual representations of experimental results to understand the best parameters for the chat bot.
+	Continuing with explanation of response generation where is shown how did I implemented the system so the relevant chunks are used to generate meaningful and context aware responses. Finally, the chapter concludes with a discussion of the evaluation process and visual representations of experimental results to understand the best parameters for the chatbot.
 	
 	\section{System Architecture and Implementation}
 	The project consists of three main parts. First is the video live stream which is the main data source. The second is the frontend, which holds the web browser user interface. It is responsible for collecting data from the video stream and communicating with the third component, the backend server. The backend holds most of the project logic. From embedding of the data till generating the respose and evaluation. The following sections describe each component in detail and explain how they are integrated to form a connected system.
@@ -445,9 +462,9 @@
 			\item \textbf{Jest} – TypeScript testing framework used for unit testing.
 			\item \textbf{HTML and CSS} – Markup and styling languages used to create the user interface.
 		\end{enumerate}
-		
+		\leavevmode\\
 		\item \textbf{Result Interpretation}
-		\begin{enumerate}
+		\begin{enumerate}[itemsep=-1em, topsep=0pt]
 		    \item \textbf{Matplotlib} – A library used for creating static and interactive visualizations in Python. It was used to generate radar charts and grouped bar plots that clearly communicate performance metrics across different RAG and prompt engineering configurations.
 			\item \textbf{Seaborn} – A Python data visualization library built on top of Matplotlib, used for generating aesthetically appealing and informative statistical graphics. 
 			\item \textbf{Pandas} – A data analysis and manipulation library that provided efficient data structures (DataFrames) for cleaning, grouping, and analyzing large evaluation result datasets.
@@ -467,10 +484,10 @@
 	\end{figure}
 	
 	
-	The first component is the video stream, which is a data source for the research. The data are then processed in the frontend part of the project.  Once the data is cleaned and prepared, it is sent to the backend via two API endpoints:
+	The first component is the video stream, which is a data source for the research. The data are then accumulated in the frontend part of the project. Once the data is accumulated, it is sent to the backend via two API endpoints:
 	\begin{enumerate}
 		\item \textbf{POST /Embed} - The purpose of this endpoint is to send the data that are ready to be embedded to the backend. This API endpoint has two parameters. First is  \texttt{"text"}: since the chunking logic is implemented in the frontend part of the project, these chunks are sent independently to the backend, where the embedding logic is executed. The second parameter of this endpoint is \texttt{"sourceID"}. In the research I thought that there might be multiple video stream data sources in the embedding database. So each chunk that is sent to be embedded has its source identification tag based on the video stream source. This means that all embedded chunks from one source end up in the same vector database.
-		\item \textbf{POST /ask} - The role of this endpoint is to handle user queries. It accepts two parameters that are sent to the backend. First \texttt{"query"}: this contains the user's input, which is sent in JSON format to the backend for processing. Second \texttt{"character"}, which defines the chat bot assistent's persona in the final prompt. This parameter is intended to be configured on the frontend by a system administrator. This parameter value can for example be, "American Football Expert", "Tennis Commentator", "Basketball Enthusiast" etc. This flexibility enables the assistant to act in the conversation, in communication style based on the video stream sport type.		
+		\item \textbf{POST /ask} - The role of this endpoint is to handle user queries. It accepts two parameters that are sent to the backend. First \texttt{"query"}: this contains the user's input, which is sent in JSON format to the backend for processing. Second \texttt{"character"}, which defines the chatbot assistent's persona in the final prompt. This parameter is intended to be configured on the frontend by a system administrator. This parameter value can for example be, "American Football Expert", "Tennis Commentator", "Basketball Enthusiast" etc. This flexibility enables the assistant to act in the conversation, in communication style based on the video stream sport type.		
 	\end{enumerate}
 	
 	Last part of the architecture is the backend. It handles the core logic of embedding, querying, response generation and evaluation.It retrieves relevant contexts from embedded video data and formulates a prompt for the LLM API. The LLM API then generates an answer based on this prompt and returns it to the backend that passes the response to frontend. All the main components are also shown in the figure~\ref{fig:data_flow}
@@ -493,13 +510,13 @@
 		
 	\textbf{subtitleId and channel}: These both show the subtitle track from which the cue originated. This is important for keeping namespaces for each embedding source as discussed in System Architecture section in the API endpoints.
 	
-	\textbf{start and end}: Floating point values that mark the start and end times (in seconds) of the subtitle cue in the video timeline. These fields may be useful for providing metadata for the chat bot.
+	\textbf{start and end}: Floating point values that mark the start and end times (in seconds) of the subtitle cue in the video timeline. These fields may be useful for providing metadata for the chatbot.
 	
 	\textbf{text}: Contains the actual spoken content extracted from the video stream. It is the most important field because it is the core data used for chunking, embedding and retrieval.
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=1.25\textwidth]{figures/data_object.png} 
+		\includegraphics[width=1\textwidth]{figures/data_object.png} 
 		\caption{Data Object passed from video stream}
 		\label{fig:data_object}
 	\end{figure}
@@ -533,13 +550,12 @@
 	This modular structure has clear separation of roles, making the backend codebase maintainable and scalable.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.55\textwidth]{figures/folder_structure.png} 
+		\includegraphics[width=0.5\textwidth]{figures/folder_structure.png} 
 		\caption{Folder structure of the project}
 		\label{fig:folder_structure}
 	\end{figure}
 
 	
-	API Endpoint Handling
 	The backend uses Flask as the web framework to manage API endpoints. The main endpoints are the same as mentioned in frontend description:
 	
 	\textbf{POST /ask}: Handles user queries by retrieving relevant context from the vector database and generating a response using a LLM.
@@ -556,7 +572,7 @@
 	  
 	\textbf{Evaluation}: Lastly evaluation logic is the backend /lib directory. There are generated responses that are filled into evaluation datasets. These are then evaluated on different metrics and saved in to json files. More about this in seciton~\ref{sec:evaluation}
 	\newline
-	\par Lastly, I want to describe how the frontend and backend parts of the system communicate together. The connection is done through API endpoints. When the frontend needs to send data to the backend, it sends it in JSON format. On the backend, there is a middleware that checks if the data is correct before using it. It makes sure that the data from the frontend has the correct structure, types, and values. Thanks to this, the backend does not crash because of bad or unexpected data. This middleware can be scaled in the future as it is crucial for data valuadtion and security, so the chat bot cannot be tricked by user prompts into doing something unintended and wrong. 
+	\par Lastly, I want to describe how the frontend and backend parts of the system communicate together. The connection is done through API endpoints. When the frontend needs to send data to the backend, it sends it in JSON format. On the backend, there is a middleware that checks if the data is correct before using it. It makes sure that the data from the frontend has the correct structure, types, and values. Thanks to this, the backend does not crash because of bad or unexpected data. This middleware can be scaled in the future as it is crucial for data valuadtion and security, so the chatbot cannot be tricked by user prompts into doing something unintended and wrong. 
 
 
 	\subsection{Chunking}
@@ -617,22 +633,22 @@
 	Two key research challenges came up during this process:
 	
 	\begin{itemize}
-		\item \textbf{Optimal chunk size:} I need to find balance between chunk size, processing delay and token cost. For example, waiting until 10 000 characters accumulate might take 10 to 15 minutes, resulting in the chat bot without having understanding of recent context. On the other hand, chunks that are too small may contain insufficient information for accurate retrieval. Also bigger chunks contain more tokens to retrieve what makes the response generation more expensive. 
+		\item \textbf{Optimal chunk size:} I need to find balance between chunk size, processing delay and token cost. For example, waiting until 10 000 characters accumulate might take 10 to 15 minutes, resulting in the chatbot without having understanding of recent context. On the other hand, chunks that are too small may contain insufficient information for accurate retrieval. Also bigger chunks contain more tokens to retrieve what makes the response generation more expensive. 
 		Therefore data were created with multiple chunking sizes for the evaluation of the best chunking size.
 		
-		\item \textbf{Choice of separator and overlap:} The effectiveness of chunking heavily depends on choosing appropriate separators. Bad choice can lead to unnatural splits in the text. In this project, the end of sentence \texttt{"."} and the start of commentator speaking indicators \texttt{">>"} were found to be the most reliable for ending of the chunks. Additionally, chunks with overlap were added to the datasets for evaluation. Overlap takes x characters from the previous chunk to keep contextual continuity between chunks. This should make the chat bot more effective because it should have bigger awareness of the context.
+		\item \textbf{Choice of separator and overlap:} The effectiveness of chunking heavily depends on choosing appropriate separators. Bad choice can lead to unnatural splits in the text. In this project, the end of sentence \texttt{"."} and the start of commentator speaking indicators \texttt{">>"} were found to be the most reliable for ending of the chunks. Additionally, chunks with overlap were added to the datasets for evaluation. Overlap takes x characters from the previous chunk to keep contextual continuity between chunks. This should make the chatbot more effective because it should have bigger awareness of the context.
 
 		
 	\end{itemize}
 	
-	Overall, this custom real-time chunking approach is important component of the system. It makes possible continuous embedding and context retrieval to maintain a responsive chat bot.
+	Overall, this custom real-time chunking approach is important component of the system. It makes possible continuous embedding and context retrieval to maintain a responsive chatbot.
 	
 	\subsection{Embedding}
 	\label{sec:embedding}
 %	How does it work in my project?
 	The embedding is important part of this project. It converts text chunks into vector representations that can be stored and later retrieved from the vector database, ChromaDB. With good embeddings, it is easier and more accurate to search for right context based on the query from user. As the retriever performs searches in vector space rather than with traditional keyword matching.
 	
-	In a Retrieval-Augmented Generation system, the quality of the retrieved context has a direct impact on the quality of the chat bot's final response. As retrieval is done only based on similarity in the vector space, good embeddings are essential for retrieving the most relevant chunks. If the embeddings represent the meaning of the text poorly, the retriever might return irrelevant content, which can confuse the model and result in wrong answers. High quality embeddings make sure that semantically close texts are grouped together, what makes the model to give better responses.
+	In a Retrieval-Augmented Generation system, the quality of the retrieved context has a direct impact on the quality of the chatbot's final response. As retrieval is done only based on similarity in the vector space, good embeddings are essential for retrieving the most relevant chunks. If the embeddings represent the meaning of the text poorly, the retriever might return irrelevant content, which can confuse the model and result in wrong answers. High quality embeddings make sure that semantically close texts are grouped together, what makes the model to give better responses.
 	
 	There are different embedding models available from different companies. These models can vary in many aspects such as vector dimensionality (for example: 512, 1536, 3072), training data and performance on different types of content. These differences affect how accurate the embeddings are in specific use cases like retrieval.
 	
@@ -642,7 +658,7 @@
 
 	Embedding for prompt engineering approach is also different as for the response generation part where I had to handle prompt engineering in separate file, embeddings are more straightforward. There’s no need for context retrieval So I didn't needed to create one more file for prompt engineering approach.
 	
-	To summarize, embedding determines how well the chat bot understands and connects the live input with stored information. I tested three embedding models which will be evaluated later in evaluation chapter.
+	To summarize, embedding determines how well the chatbot understands and connects the live input with stored information. I tested three embedding models which will be evaluated later in evaluation chapter.
 
 	
 
@@ -654,9 +670,9 @@
 	The first step in the response generation process is retrieving relevant chunks of information from the vector database. For this I needed to take to account two components:
 	
 	\begin{itemize}
-		\item \textbf{Retrieval Method:} When a user submits a query, the retriever performs a cosine similarity search against the stored embeddings. This means that the user query is embedded to vectors with a embedding model and compared to the stored vector space. The \texttt{topK} parameter determines how many chunks are retrieved ($k=2$). The best top K number was researched, because lower \texttt{k} can lead to more focused context, while a higher \texttt{k} may introduce noise but offer broader coverage. One additional aspect to take to account is that, the higher K number the more tokens does one query cost and the longer response time is.
+		\item \textbf{Retrieval Method:} When a user submits a query, the retriever performs a cosine similarity search against the stored embeddings. This means that the user query is embedded to vectors with a embedding model and compared to the stored vector space. The \texttt{topK} parameter determines how many chunks are retrieved ($k=2$). The best top K number was researched in this thesis by trying out different top K configurations, because lower \texttt{k} can lead to more focused context, while a higher \texttt{k} may introduce noise but offer broader coverage. More about this in results chapter \ref{ch:results}. One additional aspect to take to account is that, the higher K number the more tokens does one query cost and the longer response time is.
 		
-		\item \textbf{Context Construction:} Retrieved chunks are grouped into a single context string, which forms the basis for prompt construction and response generation.
+		\item \textbf{Context Construction:} The found top K retrieved chunks are grouped into a single context string. We can retrieve the string format of chunks because we are storing both embedding and their string representation of each chunk in the database. The grouped chunks forms the basis for prompt construction and response generation.
 	\end{itemize}
 	
 	When the most relevant chunks are retrieved, they are added into a prompt for the language model. The prompt is carefully designed to guide the model towards generating responses that are accurate.
@@ -731,7 +747,7 @@
 	
 	\subsection{Evaluation}
 	\label{sec:evaluation}
-	To assess the effectiveness of the implemented RAG chatbot system, I designed a structured evaluation process. The goal of this evaluation was to determine what are the best chat bot parameters to respond most accurately to user queries. This section describes the evaluation pipeline, the ground truth data, selection of parameters that are tested and the selection and interpretation of performance metrics.
+	To assess the effectiveness of the implemented RAG chatbot system, I designed a structured evaluation process. The goal of this evaluation was to determine what are the best chatbot parameters to respond most accurately to user queries. This section describes the evaluation pipeline, the ground truth data, selection of parameters that are tested and the selection and interpretation of performance metrics.
 	
 	
 	The first step in the evaluation process was to get a reliable set of ground truth question answer pairs. These were generated using an LLM with access to the full match transcript. A total of 66 pairs were created, covering a range of fact based questions and answers to them. This dataset formed the basis of all evaluations.
@@ -749,7 +765,9 @@
 	\begin{verbatim}
 		{
 			"question": "Who are the commentators calling the game?",
-			"answer": "The commentators calling the game are Mark Jones, Louis Riddick, and Quint Kessenich. They're providing insights and observations throughout the matchup between Washington State and Wisconsin.",
+			"answer": "The commentators calling the game are Mark Jones, Louis Riddick,
+			 and Quint Kessenich. They're providing insights and observations throughout
+			 the matchup between Washington State and Wisconsin.",
 			"contexts": [..., ..., ...],
 			"ground_truth": "Mark Jones, Louis Riddick, and Quint Kessenich."
 		}
@@ -792,7 +810,7 @@
 	After selecting the best performing setup based on the GPT-4o-mini results, the same configuration was re-evaluated using Gemini 2.0 Flash LLM to see performance using different LLMs. Since new LLM models were released after evaluating with these two, I did also evaluate the two best configurations with newest cost efficient LLMs from OpenAI gpt-4.1-mini and Google Gemini Flash 2.5. Finally I evaluated the best configurations with one state of the art model that is not cost efficient just to see if there is a difference.
 	
 	
-	The evaluation was done using the RAGAS framework\footnote{\url{https://github.com/explodinggradients/ragas}}, which is made for evaluating chat bots and RAG systems. These evaluation metrics were computed:
+	The evaluation was done using the RAGAS framework\footnote{\url{https://github.com/explodinggradients/ragas}}, which is made for evaluating chatbots and RAG systems. These evaluation metrics were computed:
 	
 	\begin{itemize}
 		\item \textbf{Context Precision}: Measures the accuracy of the retrieved chunks.
@@ -842,13 +860,13 @@
 	After identifying the two top performing parameter configurations, I re-evaluated both with chunk overlap. These results were again visualized using radar plots for high-level multi-metric comparison and a summary table showing exact metric values (Table~\ref{tab:best_config_overlap}).
 	
 	
-	Next, the selected top-performing RAG configurations were evaluated using different LLMs. The results of these evaluations were visualized using grouped bar plots. This made possible direct comparison of performance across LLMs while holding other parameters constant. A similar approach was taken for the prompt engineering method, where different LLMs were evaluated without retrieval, and the results were plotted to compare their effectiveness Figure~\ref{fig:llm_prompt_engineering}.
+	Next, the selected top-performing RAG configurations were evaluated using different LLMs. The results of these evaluations were visualized using grouped bar plots. This made possible direct comparison of performance across LLMs while holding other parameters constant. A similar approach was taken for the prompt engineering method, where different LLMs were evaluated without retrieval, and the results were plotted to compare their effectiveness. More about this in Section~\ref{sec:pevsragllm}.
 	
 	
 	As a last visualization I created comprehensive visualization to compare the performance of the best prompt engineering setups versus the best RAG configurations across different LLMs. This comparison was visualized using combined bar plots showing the core output metrics (Answer Correctness, Relevancy, Semantic Similarity, and Average Time). This visualization provides a clear picture of the trade-offs between prompt engineering and RAG systems in terms of performance and latency.
 
 
-	Finally, these visualizations were made to help better understand what are the best configurations for live stream chat bot. I will look on the final results in the next chapter~\ref{ch:results}.
+	Finally, these visualizations were made to help better understand what are the best configurations for live stream chatbot. I will look on the final results in the next chapter~\ref{ch:results}.
 
 	
 
@@ -860,7 +878,7 @@
 	
 	\section{Best RAG Parameters}
 	
-	In this section there are be described the results for different parameter configurations in the RAG approach.
+	In this section there are described the results for different parameter configurations in the RAG approach.
 	
 	
 	First, I evaluated and visualized RAG responses with and without overlap. In Figure~\ref{fig:overlap}, we can see that the overlap configuration achieves slightly better metric scores. This is particularly noticeable with the smaller chunk size of 600 tokens. Additionally, responses with overlap show shorter response times, indicating better efficiency. Since the differences in the metrics are relatively small, I created Table~\ref{tab:chunk_overlap_results} to support better interpretation of the results.
@@ -912,28 +930,7 @@
 		\label{fig:heatmap_avg_config}
 	\end{figure}
 	
-	Since I created the first heat map plot for average of each metric I did not see how the configurations behave on each metric. Now I will look at the heat map for each of the 6 metrics and describe the findings.
-	
-	
-	Figure~\ref{fig:heatmap_ans_rel} shows how well different RAG configurations performed in terms of answer relevancy. The best performance was achieved using gemini-embedding-exp-03-07 with K=6 and chunk size 1500 or 3000, reaching scores around 0.84 and 0.81.
-	Text-embedding-3-large performed consistently well across all configurations, though not as high as Gemini. Text-embedding-ada-002 showed the weakest performance, especially for small chunk sizes and low K values. This heatmap corresponds with the average values for all metrics in Figure~\ref{fig:heatmap_avg_config}.
-	
-	
-	Next the context precision metric. The metric measures the proportion of retrieved chunks that are actually relevant to the user's query. 
-	We can see \ref{fig:heatmap_ctx_prc} that the gemini-embedding-exp-03-07 model consistently outperforms the others, achieving the highest context precision of 0.66 at multiple configurations (K=2 and K=4, chunk size=600). Smaller chunk sizes (600 tokens) generally perform better across all models when K is low (K=2 or 4), likely because shorter chunks reduce irrelevant content per retrieval unit.
-	This metric highlights the trade-off between chunk size and retrieval count (K). Smaller, focused chunks perform better, especially when fewer chunks are retrieved. However, without strong embedding model, even good configurations have bad results.
-	
-	
-	To continue, I will describe context recall. The heatmap in Figure~\ref{fig:heatmap_ctx_rec} reveals that the \texttt{gemini-embedding-exp-03-07} model achieves the highest context recall, peaking at 0.82 with K=6 and a chunk size of 3000. The larger chunk sizes (1500 and 3000) and higher k (4 and 6) generally show higher recall values across all models, suggesting that larger chunks capture more of the relevant context, especially when more chunks are retrieved. However, the \texttt{text-embedding-ada-002} model consistently underperforms, regardless of the configuration.
-	
-	
-	The Faithfulness metric, which evaluates the degree to which the generated answers are grounded in the retrieved context. The heatmap in Figure~\ref{fig:heatmap_faithfullnes} illustrates that the \texttt{gemini-embedding-exp-03-07} model generally has higher faithfulness scores, reaching a peak of 0.74 at K=6 and a chunk size of 1500. In general, increasing K tends to improve faithfulness. This suggest that a wider context helps reduce hallucination, however if the context is too big the score gets worse as in configuration with K6 and chunk size 3000.
-
-	
-	Further, I analyze Semantic Similarity, which reflects how closely the meaning of the generated answer aligns with ground truth. The heatmap in Figure~\ref{fig:heatmap_sem_sim} shows that all configurations achieve relatively high semantic similarity scores. The \texttt{gemini-embedding-exp-03-07} model is still the most consistent. While differences between configurations are small, larger K values (4 and 6) with larger chunk sizes (1500 and 3000) tend to get slightly better semantic similarity scores. Overall, semantic similarity is less sensitive to configuration changes compared to other metrics such as context precision or faithfulness.
-	
-	
-	Lastly, Answer Correctness, which checks the factual accuracy of the generated answers compared to the ground truth. As shown in Figure \ref{fig:heatmap_ans_corr} this metric has the lowest results out of all metrics. The answer correctness scores were excluded from the average performance heatmap in Figure \ref{fig:heatmap_avg_config} because including them could skew the trends observed in the other metrics down.
+	Since I created the first heat map plot for average of each metric I did not see how the configurations behave on each metric. I look at the heat map for each of the 6 metrics and describe the findings in appendix~\ref{appendix}.
 	
 	
 	To conclude this part, I am choosing the configuration \textbf{chunk size 1500, K6 and gemini-embedding-exp-03-07} as the best RAG configuration because it performed the best out of all configurations across most metrics. 
@@ -941,7 +938,7 @@
 	There is a configuration with the same embedding model and top K, but with different chunk size that performed equally well. However, I decided not to select this configuration because it uses a chunk size that is twice as large, resulting in twice the token cost per query. Additionally, a chunk size of 3000 characters is less suitable for real-time applications, as it typically takes around 4 to 5 minutes to accumulate enough content. In comparison, a 1500 character chunk can be gathered in approximately half the time, making it more responsive for real-time retrieval scenarios.
 	
 	
-	Next I tried out to make sure that the overlap results are valid. I compared the two best configurations of heatmap with overalp version of them. And based on results in table below we can see that overlap versions are performing better. It confirmed the findings from the Figure~\ref{fig:overlap}.
+	Next I tried out to make sure that the overlap results are valid. I compared the two best configurations of heatmap with overlap version of them. And based on results in table below we can see that overlap versions are performing better for text chunk size 3000. For chunk size 1500 the overlap version have similar values. So, this comparison somewhat confirmed the findings from the Figure~\ref{fig:overlap}.
 	
 	
 	\begin{table}[!htbp]
@@ -953,12 +950,12 @@
 				\textbf{Chunk Size} & \textbf{Config} & \textbf{Ctx Prec} & \textbf{Ctx Recall} & \textbf{Faithfulness} & \textbf{Ans Rel} & \textbf{Ans Corr} & \textbf{Sem Sim} & \textbf{Avg Time (s)} \\
 				\midrule
 				\multirow{2}{*}{1500} 
-				& No Overlap       & \textbf{0.626} & 0.735 & \textbf{0.736} & \textbf{0.838} & \textbf{0.462} & 0.837 & 3.00 \\
-				& Overlap 250 CH   & 0.618 & \textbf{0.768} & 0.727 & 0.783 & 0.440 & \textbf{0.839} & \textbf{3.16} \\
+				& No Overlap       & \textbf{0.626} & 0.735 & \textbf{0.736} & \textbf{0.838} & \textbf{0.462} & 0.837 & \textbf{3.00} \\
+				& Overlap 250 CH   & 0.618 & \textbf{0.768} & 0.727 & 0.783 & 0.440 & \textbf{0.839} & 3.16 \\
 				\midrule
 				\multirow{2}{*}{3000} 
-				& No Overlap       & 0.570 & 0.818 & 0.696 & 0.806 & 0.469 & 0.836 & 2.99 \\
-				& Overlap 400 CH   & \textbf{0.624} & \textbf{0.818} & \textbf{0.710} & \textbf{0.841} & \textbf{0.464} & \textbf{0.842} & \textbf{3.19} \\
+				& No Overlap       & 0.570 & 0.818 & 0.696 & 0.806 & 0.469 & 0.836 & \textbf{2.99} \\
+				& Overlap 400 CH   & \textbf{0.624} & \textbf{0.818} & \textbf{0.710} & \textbf{0.841} & \textbf{0.464} & \textbf{0.842} & 3.19 \\
 				\bottomrule
 			\end{tabular}
 		}
@@ -967,7 +964,9 @@
 	
 	In summary, the experiments show that chunking with overlap slightly improves RAG performance across most metrics. We discovered that the best embedding model for all the metrics is \texttt{gemini-embedding-exp-03-07} and the overall best RAG configuration with chunk size of 1500 characters and topK of 6 with overlap. 
 	
+	
 	\section{Prompt engineering versus RAG Comparison Through Different LLMs}
+	\label{sec:pevsragllm}
 	
 	In this section I will compare the prompt engineering approach with the best RAG configuration accross different LLMs.
 	
@@ -1027,13 +1026,17 @@
 	This comparison shows the trade-offs between the Prompt Engineering and RAG approaches across various LLMs. While Prompt Engineering often has slightly better metric scores, it mostly results in significantly longer response times, which is not practical for real-time applications. The RAG approach when combined with models such as \textbf{gpt-4.1-nano} and \textbf{gemini-2.0-flash} offers a favorable balance between performance and speed. Notably, \textbf{gemini-2.0-flash} stands out in Prompt Engineering for its exceptional speed and better performance. However, RAG still seems to be the more suitable choice for real time applications because of the efficiency and cost of the LLM calls that will be described in the next section.
 	
 	
-	\section{Efficiency and cost}
-	
-	In the previous sections, we discovered the most efficient configurations based on the trade-off between response quality and latency. The best performing setup in terms of average evaluation metrics and response time was the Prompt Engineering approach using the \texttt{gemini-2.0-flash} model. The second best result was achieved by the RAG approach with the configuration: chunk size of 1500 characters, topK set to 6, embedding model gemini-embedding-exp-03-07, and an overlap of 250 characters, evaluated with the LLM \texttt{gpt-4.1-nano}.
+	\section{Efficiency and Cost}
+
+	In the previous sections, we discovered the most efficient configurations based on the trade-off between response quality and latency. The best performing setup in terms of average evaluation metrics and response time was the Prompt Engineering approach using the \texttt{gemini-2.0-flash} model. The second best result was achieved by the RAG approach with the configuration: chunk size of 1500 characters, topK set to 6, embedding model gemini-embedding-exp-03-07, and an overlap of 250 characters, combined with the LLM \texttt{gpt-4.1 nano}.
 	
 	As explained in Section~\ref{sec:LLM}, LLM query cost is typically measured in tokens. This aspect is critical when considering the scalability and efficiency of deploying such a system in a production environment.
 	
-	In the RAG configuration, the LLM receives a context composed of the top 6 most relevant chunks, each containing approximately 1500 characters. This results in a total of roughly 9,000 characters (or about 2250 tokens) passed to the LLM per query. In comparison, the Prompt Engineering approach sends the full concatenated text of the source document approximately 108,000 characters (or about 27,000 tokens) as input context. This results into a multiple times larger token count per query, resulting in higher computational costs.
+	First, there is a fixed token cost that is the same for both approaches. This is for the manual context prompt 	and is approximately 250 tokens in size. The cost of this context prompt is only €0.000025. Therefore it's negligible compared to the other costs. Another negligible cost is the embedding token cost used for the RAG approach. Since the entire dataset contains around 25,000 tokens, the embedding cost with the gemini-embedding-exp-03-07 model is less than one cent (€0.00325). This cost is incurred only once per data source, making it insignificant in the overall operational expenses.
+	
+	In the RAG configuration, the LLM receives a context composed of the top 6 most relevant chunks, each containing approximately 1500 characters. This results in a total of roughly 9,000 characters (or about 2,250 tokens) passed to the LLM per query. This cost, with the best LLM that was selected gpt-4.1 nano, is €0.00025 per query. While this may seem insignificant for a single query, the idea behind this application is scalability. Therefore, a more relevant metric is the cost per 1,000 queries, which is €0.225 — still a feasible amount. Additionally to this there is also some token cost for embedding generation. However, as described before this cost is low and negligible as we need only one embedding round per data source for multiple users.
+	
+	In comparison, the Prompt Engineering approach sends the full concatenated text of the source document approximately 108,000 characters (or about 27,000 tokens) as input context. This results into a multiple times larger token count per query, resulting in higher computational costs. These costs are approximately €2.7 per 1000 queries, which is already significant especially in comparison with RAG approach cost (12 times higher). 
 	
 	The Prompt Engineering approach introduces several challenges when deployed at scale:
 	
@@ -1054,17 +1057,17 @@
 
 	\section{Conclusion}
 	
-	This thesis explored the problem of delivering accurate and timely responses in a chat bot built for sports live-streams using LLMs. The main goal was to investigate how relevant context from a live-stream can be provided to an LLM to maximize performance. Two strategies were evaluated: prompt engineering (providing full raw content directly) and Retrieval-Augmented Generation, which uses a vector store to retrieve and send as context selected chunks of information.
+	This thesis explored the problem of delivering accurate and timely responses in a chatbot built for sports live-streams using LLMs. The main goal was to investigate how relevant context from a live-stream can be provided to an LLM to maximize performance. Two strategies were evaluated: prompt engineering (providing full raw content directly) and Retrieval-Augmented Generation, which uses a vector store to retrieve and send as context selected chunks of information.
 	
-	The first research question focused on *how context from live-stream content can be provided to a Large Language Model (LLM) in order to build an accurate chat bot*. Two main approaches were explored to answer this question: (1) prompt engineering, where the entire available context is appended directly to the user query, and (2) RAG, where only the most relevant content chunks are retrieved and passed to the model. The experiments showed that both approaches can lead to high performing results under specific conditions. However, RAG offered better scalability and adaptability to increasing data size. Prompt engineering performed strongly only with specific LLM (gemini-flash-2.0) but it was cost unefficient.
+	The first research question focused on *how context from live-stream content can be provided to a Large Language Model (LLM) in order to build an accurate chatbot*. Two main approaches were explored to answer this question: (1) prompt engineering, where the entire available context is appended directly to the user query, and (2) RAG, where only the most relevant content chunks are retrieved and passed to the model. The experiments showed that both approaches can lead to high performing results under specific conditions. However, RAG offered better scalability and adaptability to increasing data size. Prompt engineering performed strongly only with specific LLM (gemini-flash-2.0) but it was cost unefficient.
 	
 	To answer the sub-question on *what are the most effective hyperparameters for RAG and prompt engineering*, an extensive evaluation was performed on 27 RAG configurations involving different chunk sizes (600, 1500, 300), top-K retrieval values (2, 4, 6), and three embedding models (text-embedding-ada-002, text-embedding-3-large, gemini-embedding-exp-03-07). By visualizing these configurations we found out that the best-performing RAG setup used a \textbf{chunk size of 1500 character with overlap of 250 characters, topK=6, and the gemini-embedding-exp-03-07 embedding model}. For the prompt engineering approach there were no hyperparameters to be researched.
 	
-	Regarding *how Retrieval-Augmented Generation compares with prompt engineering*, results showed that prompt engineering with the LLM gemini-flash-2.0 generated the highest average performance across evaluation metrics. However, it required passing the full context (equivalent to roughly 27,000 tokens or more) for each query, resulting in high cost. On the other hand, the best RAG configuration achieved slightly lower but still strong performance. However, it was passing only approximately 2.250 tokens per query, leading to a much more cost efficient solution. Therefore, for real-time application like live-streaming chat bot, RAG is a more sustainable approach than prompt engineering. Especially under high user load and longer source content.
+	Regarding *how Retrieval-Augmented Generation compares with prompt engineering*, results showed that prompt engineering with the LLM gemini-flash-2.0 generated the highest average performance across evaluation metrics. However, it required passing the full context (equivalent to roughly 27,000 tokens or more) for each query, resulting in high cost. On the other hand, the best RAG configuration achieved slightly lower but still strong performance. However, it was passing only approximately 2.250 tokens per query, leading to a much more cost efficient solution. Therefore, for real-time application like live-streaming chatbot, RAG is a more sustainable approach than prompt engineering. Especially under high user load and longer source content.
 	
 	Finally, to answer *what are effective methods to evaluate and compare the performance of RAG and prompt engineering*, the thesis used RAGAS metrics: Answer Correctness, Answer Relevancy, Semantic Similarity, Context Precision, Context Recall, and Faithfulness for RAG approach. For prompt engineering were used only Answer Correctness, Answer Relevancy and Semantic Similarity metrics because there is no context retrieval part to be evaluated. Additionally , these metrics were supported by average response time measurements. The combination of these metrics gave a detailed way to compare different LLM-based chatbot methods for live-streaming environments. The visualizations used — radar plots, heatmaps, and grouped bar charts. These enabled to interpret the comparisons across configurations.
 	
-	In conclusion, both RAG and prompt engineering are good techniques for building LLM-based chat bots for live-stream content. However, RAG with optimized hyperparameters shows to be more scalable and cost effective solution for real-time responsiveness. Especially in scenarios with large or continuously growing content.
+	In conclusion, both RAG and prompt engineering are good techniques for building LLM-based chatbots for live-stream content. However, RAG with optimized hyperparameters shows to be more scalable and cost effective solution for real-time responsiveness. Especially in scenarios with large or continuously growing content.
 	
 	
 	\section{Discussion}
@@ -1080,7 +1083,7 @@
 	\begin{itemize}
 		\item \textbf{Lack of human evaluation:} The chatbot's performance was evaluated entirely through automated metrics. While these metrics provide objective comparability, they do not capture subjective qualities like user satisfaction or engagement. Human evaluation, either through surveys or direct user feedback, was outside the scope of this thesis due to time and resource limitations.
 		
-		\item \textbf{Lack of metadata and multi-source context:} The current system relied solely on textual transcripts for context. Incorporating metadata, such as player statistics, real-time game state, or historical match information, could have significantly enhanced chat bot responses.
+		\item \textbf{Lack of metadata and multi-source context:} The current system relied solely on textual transcripts for context. Incorporating metadata, such as player statistics, real-time game state, or historical match information, could have significantly enhanced chatbot responses.
 	\end{itemize}
 	
 	\subsection{Future Improvements}
@@ -1121,6 +1124,11 @@
 	
 	\begin{appendices} 
 		\chapter{Additional Comparison Visualizations}
+		\label{appendix}
+		
+
+		Figure~\ref{fig:heatmap_ans_rel} shows how well different RAG configurations performed in terms of answer relevancy. The best performance was achieved using gemini-embedding-exp-03-07 with K=6 and chunk size 1500 or 3000, reaching scores around 0.84 and 0.81.
+		Text-embedding-3-large performed consistently well across all configurations, though not as high as Gemini. Text-embedding-ada-002 showed the weakest performance, especially for small chunk sizes and low K values. This heatmap corresponds with the average values for all metrics in Figure~\ref{fig:heatmap_avg_config}.
 		\begin{figure}[!htbp]
 			\centering
 			\includegraphics[width=0.95\textwidth]{figures/heatmap_answer_relevancy.png}
@@ -1129,6 +1137,9 @@
 			\label{fig:heatmap_ans_rel}
 		\end{figure}
 		
+		Next the context precision metric. The metric measures the proportion of retrieved chunks that are actually relevant to the user's query. 
+		We can see \ref{fig:heatmap_ctx_prc} that the gemini-embedding-exp-03-07 model consistently outperforms the others, achieving the highest context precision of 0.66 at multiple configurations (K=2 and K=4, chunk size=600). Smaller chunk sizes (600 tokens) generally perform better across all models when K is low (K=2 or 4), likely because shorter chunks reduce irrelevant content per retrieval unit.
+		This metric highlights the trade-off between chunk size and retrieval count (K). Smaller, focused chunks perform better, especially when fewer chunks are retrieved. However, without strong embedding model, even good configurations have bad results.
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.95\textwidth]{figures/heatmap_context_precision.png} 
@@ -1137,6 +1148,7 @@
 			\label{fig:heatmap_ctx_prc}
 		\end{figure}
 		
+		To continue, I will describe context recall. The heatmap in Figure~\ref{fig:heatmap_ctx_rec} reveals that the \texttt{gemini-embedding-exp-03-07} model achieves the highest context recall, peaking at 0.82 with K=6 and a chunk size of 3000. The larger chunk sizes (1500 and 3000) and higher k (4 and 6) generally show higher recall values across all models, suggesting that larger chunks capture more of the relevant context, especially when more chunks are retrieved. However, the \texttt{text-embedding-ada-002} model consistently underperforms, regardless of the configuration.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.95\textwidth]{figures/heatmap_context_recall.png}
@@ -1144,7 +1156,9 @@
 			\caption{Heatmap of context recall by embedding model, topK and chunk size configurations.}
 			\label{fig:heatmap_ctx_rec}
 		\end{figure}
-			
+		
+		
+			The Faithfulness metric, which evaluates the degree to which the generated answers are grounded in the retrieved context. The heatmap in Figure~\ref{fig:heatmap_faithfullnes} illustrates that the \texttt{gemini-embedding-exp-03-07} model generally has higher faithfulness scores, reaching a peak of 0.74 at K=6 and a chunk size of 1500. In general, increasing K tends to improve faithfulness. This suggest that a wider context helps reduce hallucination, however if the context is too big the score gets worse as in configuration with K6 and chunk size 3000.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.95\textwidth]{figures/heatmap_faithfulness.png} 
@@ -1153,6 +1167,8 @@
 			\label{fig:heatmap_faithfullnes}
 		\end{figure}
 		
+		
+		Further, I analyze Semantic Similarity, which reflects how closely the meaning of the generated answer aligns with ground truth. The heatmap in Figure~\ref{fig:heatmap_sem_sim} shows that all configurations achieve relatively high semantic similarity scores. The \texttt{gemini-embedding-exp-03-07} model is still the most consistent. While differences between configurations are small, larger K values (4 and 6) with larger chunk sizes (1500 and 3000) tend to get slightly better semantic similarity scores. Overall, semantic similarity is less sensitive to configuration changes compared to other metrics such as context precision or faithfulness.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.95\textwidth]{figures/heatmap_semantic_sim.png} 
@@ -1161,6 +1177,7 @@
 			\label{fig:heatmap_sem_sim}
 		\end{figure}
 			
+		Lastly, Answer Correctness, which checks the factual accuracy of the generated answers compared to the ground truth. As shown in Figure \ref{fig:heatmap_ans_corr} this metric has the lowest results out of all metrics. The answer correctness scores were excluded from the average performance heatmap in Figure \ref{fig:heatmap_avg_config} because including them could skew the trends observed in the other metrics down.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.95\textwidth]{figures/heatmap_answer_corr.png} 

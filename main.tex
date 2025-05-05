@@ -5,8 +5,8 @@
 \thesistype{Bachelor Thesis}
 \author{Patrik Palenčár}
 \supervisor{Dr. Rubén Ruiz Torrubiano, \\MSc, MBA Leto Baxevanaki}
-\copyrightyear{2024}
-\submissiondate{29.04.2025}
+\copyrightyear{2025}
+\submissiondate{05.05.2025}
 \keywords {Retrieval Augmented Generation, Prompt engineering, Large Language Models, Chatbot, Live-RAG}
 
 % Packages
@@ -28,8 +28,8 @@
 \begin{document}
 	\frontmatter
 	
-	%\maketitle
-	%\begin{declarations}\end{declarations}
+	\maketitle
+	\begin{declarations}\end{declarations}
 	
 	
 	\begin{abstract}
@@ -40,13 +40,19 @@
 			
 	During the study, various chunking and retrieval strategies for retrieval augmented generation approach were implemented and evaluated. Multiple configurations were tested across several LLMs, with a particular focus on smaller, cost-efficient models that are better suited for real-time performance. These were visualized with different plots for good comprehension of the results.
 
-	As results, the study finds the best configuration for the RAG approach and the trade-offs between various factors, such as response generation time and context token length, when comparing retrieval augmented generation and prompt engineering. Both approaches are evaluated across multiple LLMs, and the most suitable model is determined for each. Additionally, the evaluation includes an analysis of cost and proposes a final product configuration.
+	As results, the study finds the best configuration for the RAG approach and the trade-offs between various factors, such as response generation time and context token length, when comparing retrieval augmented generation and prompt engineering. Both approaches are evaluated across multiple LLMs, and the most suitable model is determined for each approach. Additionally, the evaluation includes an analysis of cost and proposes a final product configuration.
 
 	\end{abstract}
 		
 	
 	\begin{acknowledgements}
-		This is an \textbf{optional} page. Use your choice of paragraph style for text on this page. Usually, this space is for thanking your supporters and getting emotional about how grateful you are to everyone.  
+		I would like to express my thanks to Dr. Rubén Ruiz Torrubiano for his invaluable guidance and support throughout the writing process of this thesis. His insightful feedback and thoughtful suggestions were helpful in shaping both the structure and content of this work.
+		
+		I am deeply grateful to MSc, MBA Leto Baxevanaki and the entire team at Bitmovin for their continuous development support and for providing the opportunity to explore this research topic on their behalf. Their collaboration and technical insight played a crucial role in the successful implementation and evaluation of the presented solution.
+		
+		I would like to thank my university and all those who have supported me throughout my academic journey. 
+		
+		Finally, I want to thank my family and friends for always supporting me and believing in me throughout this project.
 	\end{acknowledgements}
 	
 	\addtoToC{Table of Contents}%
@@ -331,7 +337,7 @@
 	\end{itemize}
 	There are also other techniques but understanding of these two is the most important for this study.
 	
-	Lastly, for the evaluation of different metrics, naturally a LLMs is used. There can be multiple LLM calls for each question and answer pair per each metric what can make the evaluation really expensive.
+	Lastly, for the evaluation of different metrics, naturally a LLM is used. There can be multiple LLM calls for each question and answer pair per each metric, what can make the evaluation really expensive.
 	
 	\begin{figure}[H]
 		\centering
@@ -388,7 +394,7 @@
 	
 	Several other works have investigated prompt engineering in similar contexts. For example, \cite{liu2023pre} introduced a taxonomy of prompting methods and evaluated their effectiveness across a wide range of tasks. This helped identify which types of prompts are more robust for general-purpose reasoning, which is valuable when designing flexible prompt templates for real-time systems.
 	
-	The study by \cite{zhou2022least} explored least-to-most prompting, a method for decomposing complex tasks into simpler steps within the prompt. Although developed for reasoning problems, this hierarchical prompt construction can inspire ways to include structured, hierarchical game context when interacting with LLMs in streaming environments.
+	The study \cite{zhou2022least} explored least-to-most prompting, a method for decomposing complex tasks into simpler steps within the prompt. Although developed for reasoning problems, this hierarchical prompt construction can inspire ways to include structured, hierarchical game context when interacting with LLMs in streaming environments.
 	
 	Additionally, \cite{kojima2022large} demonstrated that even zero-shot prompting with carefully crafted instructions could enable large models to perform multi-step reasoning. This highlights the importance of verbal instruction design, which is directly relevant when crafting prompts that guide the chatbot’s behavior based on dynamically changing video caption inputs.
 	
@@ -501,7 +507,7 @@
 	
 	
 	\subsection{Data Handling}
-	The data handling is done mostly in the frontend part. The data with which this project works are commentary captions from sports live stream. These captions are passed by the stream in an object that can be accessed. This object with captions is send by the HTTP Live Streaming (HLS) video stream every time when there are any words said by commentators. The HLS is a video streaming protocol, works by breaking down video files in to smaller downloadable HTTP files and delivers them using the HTTP protocol\cite{cloudflarehls}.
+	The data handling is done mostly in the frontend part. The data with which this project works are commentary captions from sports live stream. These captions are passed by the stream in an object that can be accessed. This object with captions is send by the HTTP Live Streaming (HLS) video stream protocol every time when there are any words said by commentators. The HLS is a video streaming protocol, works by breaking down video files in to smaller downloadable HTTP files and delivers them using the HTTP protocol\cite{cloudflarehls}.
 	
 	In the figure~\ref{fig:data_object} is shown the one object passed to the frontend.
 	There are many fields in the object and each field in the object has a specific role. I will explain the most important fields that are used in the project:
@@ -607,7 +613,7 @@
 	
 	As already mentioned above, existing models could not be used. Therefore I developed my own chunking method using a separator based approach. Using models such as sentence based or semantic chunking was not possible because they rely on having access to complete documents, which is not possible with live data.
 	
-	I implemented the chunking method for dynamic data by creating these functions. Whole data flow is illustrated in figure~\ref{fig:chunking_loop}:
+	I implemented the chunking method for dynamic data by creating these functions. The whole data flow is illustrated in figure~\ref{fig:chunking_loop}:
 	
 	\begin{enumerate}
 		\item \texttt{accumulate(chunk\_size)}: This function accumulates incoming text in a buffer. When the total length of the accumulated text reaches the defined \texttt{chunk\_size} threshold measured in characters, it calls the next function.
@@ -645,8 +651,8 @@
 	
 	\subsection{Embedding}
 	\label{sec:embedding}
-%	How does it work in my project?
-	The embedding is important part of this project. It converts text chunks into vector representations that can be stored and later retrieved from the vector database, ChromaDB. With good embeddings, it is easier and more accurate to search for right context based on the query from user. As the retriever performs searches in vector space rather than with traditional keyword matching.
+
+	The embedding is important part of this project. It converts text chunks into vector representations that can be stored and later retrieved from the vector database, ChromaDB. With good embeddings, it is easier and more accurate to search for right context based on the query from user. Since the retriever performs searches in vector space rather than with traditional keyword matching.
 	
 	In a Retrieval-Augmented Generation system, the quality of the retrieved context has a direct impact on the quality of the chatbot's final response. As retrieval is done only based on similarity in the vector space, good embeddings are essential for retrieving the most relevant chunks. If the embeddings represent the meaning of the text poorly, the retriever might return irrelevant content, which can confuse the model and result in wrong answers. High quality embeddings make sure that semantically close texts are grouped together, what makes the model to give better responses.
 	
@@ -670,13 +676,13 @@
 	The first step in the response generation process is retrieving relevant chunks of information from the vector database. For this I needed to take to account two components:
 	
 	\begin{itemize}
-		\item \textbf{Retrieval Method:} When a user submits a query, the retriever performs a cosine similarity search against the stored embeddings. This means that the user query is embedded to vectors with a embedding model and compared to the stored vector space. The \texttt{topK} parameter determines how many chunks are retrieved ($k=2$). The best top K number was researched in this thesis by trying out different top K configurations, because lower \texttt{k} can lead to more focused context, while a higher \texttt{k} may introduce noise but offer broader coverage. More about this in results chapter \ref{ch:results}. One additional aspect to take to account is that, the higher K number the more tokens does one query cost and the longer response time is.
+		\item \textbf{Retrieval Method:} When a user submits a query, the retriever performs a cosine similarity search against the stored embeddings. This means that the user query is embedded to vectors with a embedding model and compared to the stored vector space. The \texttt{topK} parameter determines how many chunks are retrieved ($k=2$). The best top K number was researched in this thesis by trying out different top K configurations, because lower \texttt{k} can lead to more focused context, while a higher \texttt{k} may introduce noise but offer broader coverage. More about this in results chapter \ref{ch:results}. One additional aspect to take to account is that, the higher \texttt{k} number the more tokens does one query cost and the longer response time is.
 		
 		\item \textbf{Context Construction:} The found top K retrieved chunks are grouped into a single context string. We can retrieve the string format of chunks because we are storing both embedding and their string representation of each chunk in the database. The grouped chunks forms the basis for prompt construction and response generation.
+
+	
+		When the most relevant chunks are retrieved, they are added into a prompt for the language model. The prompt is carefully designed to guide the model towards generating responses that are accurate.
 	\end{itemize}
-	
-	When the most relevant chunks are retrieved, they are added into a prompt for the language model. The prompt is carefully designed to guide the model towards generating responses that are accurate.
-	
 	\begin{itemize}
 		\item \textbf{System Prompt:} A static system prompt defines the overall behavior and tone of the LLM. It includes guidelines on how to understand the retrieved context and how to simulate the voice of a specific character.
 		
@@ -725,7 +731,7 @@
 	
 	\subsection{Prompt Engineering}
 	
-	As previously discussed, this project also includes an implementation of a chatbot based on a prompt engineering approach. The logic of this approach differs from RAG by loading all of the text into the prompt as context instead of just retrieved chunks.
+	As previously discussed, this project also includes an implementation of a chatbot based on a prompt engineering approach. The logic of this approach differs from RAG by loading all of the text into the prompt as context, instead of just retrieved chunks.
 	
 	This approach simplifies the retrieval logic but introduces new technical challenges, primarily related to the model's context window limitations.
 	
@@ -753,7 +759,7 @@
 	The first step in the evaluation process was to get a reliable set of ground truth question answer pairs. These were generated using an LLM with access to the full match transcript. A total of 66 pairs were created, covering a range of fact based questions and answers to them. This dataset formed the basis of all evaluations.
 	
 
-	Next, I create testing data set. Each evaluation sample in the dataset consists of the following fields:
+	Next, I created testing data set. Each evaluation sample in the dataset consists of the following fields:
 	\begin{itemize}
 		\item \texttt{question}: The user query.
 		\item \texttt{answer}: The response generated by the LLM using the RAG pipeline described in section~\ref{sec:response_generation}.
@@ -803,11 +809,11 @@
 		 \item \textbf{Chunk Sizes:} 600, 1500, and 3000 characters
 	 \end{itemize}
 	
-	Each combination of embedding model and top-K setting was evaluated using all three chunk sizes, resulting in a total of $3 \times 3 \times 3 = 27$ distinct RAG configurations.
+	Each combination of embedding model and top K setting was evaluated using all three chunk sizes, resulting in a total of $3 \times 3 \times 3 = 27$ distinct RAG configurations.
 	
 	I continued the evaluation by selecting the two best performing combinations of embedding model, top-K value, and chunk size. Then I re-evaluated them using overlapping chunks to compare the resulting metrics overlap versus no overlap. 
 	
-	After selecting the best performing setup based on the GPT-4o-mini results, the same configuration was re-evaluated using Gemini 2.0 Flash LLM to see performance using different LLMs. Since new LLM models were released after evaluating with these two, I did also evaluate the two best configurations with newest cost efficient LLMs from OpenAI gpt-4.1-mini and Google Gemini Flash 2.5. Finally I evaluated the best configurations with one state of the art model that is not cost efficient just to see if there is a difference.
+	After selecting the best performing setup based on the GPT-4o-mini results, the same configuration was re-evaluated using Gemini 2.0 Flash LLM to see performance using different LLMs. Since new LLM models were released after evaluating with these two, I did also evaluate the two best configurations with newest cost efficient LLMs from OpenAI gpt-4.1-mini and Google Gemini Flash 2.5. Finally I evaluated the best configurations with one state of the art model (gemini 2.5 pro) that is not cost efficient just to see if there is a difference.
 	
 	
 	The evaluation was done using the RAGAS framework\footnote{\url{https://github.com/explodinggradients/ragas}}, which is made for evaluating chatbots and RAG systems. These evaluation metrics were computed:
@@ -834,7 +840,7 @@
 	\end{itemize}
 	
 	Additionally, both approaches have average time metric. This metric times how long does it take the LLM to generate a response.
-	I evaluated the prompt engineering approach with different LLMs and with the best RAG approach on these four metrics. For this I must always evaluate the responses with the same LLM because different LLMs behave differently at evaluating and it could skew the end results. So the responses are created with different LLMs but evaluation is \textbf{always} done with gpt-4o-mini.
+	I evaluated the prompt engineering approach with different LLMs and with the best RAG approach on these four metrics. For this I must always evaluate the responses with the same LLM, because different LLMs behave differently at evaluating and it could skew the end results. So the responses are created with different LLMs but evaluation is \textbf{always} done with gpt-4o-mini.
 	
 	Lastly, it is important to note that this evaluation process has pretty big financial cost. For example, one evaluation run using $K=4$, chunks size 600 with GPT-4o-mini consumed approximately 820,000 tokens and did 925 LLM requests. This shows the practical challenge of evaluating large scale RAG systems, especially when experimenting with multiple configurations.
 
@@ -854,7 +860,7 @@
 	
 	
 	As a second evaluation goal I chose to evaluate 27 different RAG configurations of three embedding models, three chunk sizes and three top K retrieved chunks values. Visualizing such a large number of combinations was a challenge. 
-	To visualize these configurations, I designed a set of heatmaps. One aggregate heatmap displays the average performance across five RAGAS metrics for each configuration (only five because answer correctness metric was skewing the results), this makes possible easy overview of which combinations perform best. In addition to that, six individual heatmaps were created for each metric. This provides detailed insights into how different configurations influence specific aspects of performance. These visualizations helped see trends between the different metrics.
+	To visualize these configurations, I designed a set of heatmaps. One aggregate heatmap displays the average performance across five RAGAS metrics for each configuration (only five because answer correctness metric was skewing the results), this makes possible an easy overview of which combinations perform best. In addition to that, six individual heatmaps were created for each metric. This provides detailed insights into how different configurations influence specific aspects of performance. These visualizations helped see trends between the different metrics.
 	
 	
 	After identifying the two top performing parameter configurations, I re-evaluated both with chunk overlap. These results were again visualized using radar plots for high-level multi-metric comparison and a summary table showing exact metric values (Table~\ref{tab:best_config_overlap}).
@@ -938,7 +944,7 @@
 	There is a configuration with the same embedding model and top K, but with different chunk size that performed equally well. However, I decided not to select this configuration because it uses a chunk size that is twice as large, resulting in twice the token cost per query. Additionally, a chunk size of 3000 characters is less suitable for real-time applications, as it typically takes around 4 to 5 minutes to accumulate enough content. In comparison, a 1500 character chunk can be gathered in approximately half the time, making it more responsive for real-time retrieval scenarios.
 	
 	
-	Next I tried out to make sure that the overlap results are valid. I compared the two best configurations of heatmap with overlap version of them. And based on results in table below we can see that overlap versions are performing better for text chunk size 3000. For chunk size 1500 the overlap version have similar values. So, this comparison somewhat confirmed the findings from the Figure~\ref{fig:overlap}.
+	Next I tried out to make sure that the overlap results are valid. I compared the two best configurations of heatmap with overlap version of them. And based on results in table below we can see that overlap versions are performing better for text chunk size 3000. For chunk size 1500 the overlap version have similar values. So, this comparison didn't really confirm the findings from the Figure~\ref{fig:overlap}.
 	
 	
 	\begin{table}[!htbp]
@@ -970,7 +976,7 @@
 	
 	In this section I will compare the prompt engineering approach with the best RAG configuration accross different LLMs.
 	
-	We already know that the best RAG configuration is embedding model gemini-embedding-exp-03-07, topK 6 and chunk size 1500 with overlap of 250 characters. Therefore all of the RAG evaluation will be conducted with this configuration.
+	We already know that the best RAG configuration is embedding model gemini-embedding-exp-03-07, top K 6 and chunk size 1500 with overlap of 250 characters. Therefore all of the RAG evaluation will be conducted with this configuration.
 	I tested both approaches with these LLMs: gpt-4o-mini (initial testing), gemini-2.0-flash-001, gemini-1.5-pro,  gemini-2.5-flash-preview-04-17, gemini-2.5-pro-preview-03-25 and gpt-4.1-nano. The visualizations of the most interesting will be now shown and analyzed.
 	
 	To see how do these two approaches compare metric-wise through different LLMs. I created bar plots showing comparisons of each common metric of both approaches as well as average time comparison bar plots per LLM.
@@ -986,11 +992,17 @@
 	\end{figure}
 	
 	
-	The second comparison of the approaches is using gpt-4.1-nano.
-	Prompt engineering again slightly outperforms RAG in all evaluation metrics. However, the average query time for prompt engineering is significantly higher — about five times longer than for the RAG approach. Given the minimal differences in scores but the major difference in response time, the RAG approach is the more efficient choice for this LLM. The visualization can be found in the appendix \ref{fig:_gpt_4.1_nano}
-
+	The second comparison of the approaches is using gpt-4.1-nano. \ref{fig:_gpt_4.1_nano}
+	Prompt engineering again slightly outperforms RAG in two out of three evaluation metrics. However, the average query time for prompt engineering is significantly higher — about five times longer than for the RAG approach. Given the minimal differences in scores but the major difference in response time, the RAG approach is the more efficient choice for this LLM. 
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\textwidth]{figures/rag_vs_pe_gpt_4.1_nano.png} 
+		\captionsetup{list=no} 
+		\caption{Comparison of Common Evaluation Metrics and average response generation times with LLM: gpt-4.1-nano between best RAG configuration and Prompt engineering approaches}
+		\label{fig:_gpt_4.1_nano}
+	\end{figure}
 	
-	Next comparison is with the first of Google's models gemini-2.0-flash It most interesting one because we can see prompt engineering approach outperforming the RAG approach on two out of three metrics and in average time as well. It has around staggering 1.3 seconds average response generation time. \ref{fig:gemini-2.0-flash} Which is the best of all evaluations through all approach/LLM evaluation combinations.
+	Next comparison is with the first of Google's models gemini-2.0-flash. It is most interesting one because we can see prompt engineering approach outperforming the RAG approach on two out of three metrics and in average time as well. It has around staggering 1.3 seconds average response generation time. \ref{fig:gemini-2.0-flash} Which is the best of all evaluations through all approach/LLM evaluation combinations.
 	
 	\begin{figure}[H]
 		\centering
@@ -1000,12 +1012,19 @@
 	\end{figure}
 	
 	The next comparison is with Google's gemini-1.5-pro model.
-	Here, the RAG approach outperforms prompt engineering in answer relevancy, while prompt engineering slightly leads in semantic similarity and answer correctness. Interestingly as this is a pro model it doesn't give better responses and the query times are worse than for smaller compact models we have seen before. Overall, due to better performance in the key metric of answer relevancy and faster responses, the RAG approach is slightly better for this LLM.\ref{fig:gemini_1.5-pro}
+	Here, the RAG approach outperforms prompt engineering in answer relevancy, while prompt engineering slightly leads in semantic similarity and answer correctness. \ref{fig:gemini_1.5-pro} Interestingly as this is a pro model it doesn't give better responses and the query times are worse than for smaller compact models we have seen before. Overall, due to better performance in the key metric of answer relevancy and faster responses, the RAG approach is slightly better for this LLM.
 	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\textwidth]{figures/rag_vs_pe_gemini_1.5-pro.png}
+		\captionsetup{list=no} 
+		\caption{Comparison of Common Evaluation Metrics and average response generation times with LLM: gemini-1.5-pro between best RAG configuration and Prompt engineering approaches}
+		\label{fig:gemini_1.5-pro}
+	\end{figure}
 	
-	To determine which LLM performs best, I compared the average evaluation metrics and normalized query times for each model using the RAG approach, as shown in the bar chart above.
+	To determine which LLM performs best, I also compared the average evaluation metrics and normalized query times for each model using the RAG approach, as shown in the bar chart above.
 	
-	We can see in figure\ref{fig:rag_comparison} that all of the four LLMs have similar average performance metrics with slight differences. However the average time to generate answer is in the gemini-2.0-flash-001 and gpt-4.1-nano much faster. If we look at the average metrics values of these two, then we can conclude that the best performing LLM for RAG approach is the newest cost efficient LLM from OpenAI \textbf{gpt-4.1-nano}.
+	We can see in figure \ref{fig:rag_comparison} that all of the four LLMs have similar average performance metrics with slight differences. However the average time to generate answer is in the gemini-2.0-flash-001 and gpt-4.1-nano much faster. If we look at the average metrics values of these two, then we can conclude that the best performing LLM for RAG approach is the newest cost efficient LLM from OpenAI \textbf{gpt-4.1-nano}.
 	
 	\begin{figure}[H]
 		\centering
@@ -1014,7 +1033,7 @@
 		\label{fig:rag_comparison}
 	\end{figure}
 	
-	In the next figure\ref{fig:pe_comparison}, we see the same comparison for the Prompt Engineering approach. We can notice a trend: models with longer average response times tend to generate better results. However, an average response time of 9 seconds is not feasible for our use case. Interestingly the fastest response is achieved by the gemini-2.0-flash model and is only 1.31 second, faster than the best RAG approach. Its average metric scores are the lowest in this comparison but as shown in the previous figure\ref{fig:gemini-2.0-flash}, all prompt engineering approaches still outperform most of the average scores of the RAG approach.
+	In the next figure \ref{fig:pe_comparison}, we see the same comparison for the Prompt Engineering approach. We can notice a trend: models with longer average response times tend to generate better results. However, an average response time of 9 seconds is not feasible for our use case. Interestingly the fastest response is achieved by the gemini-2.0-flash model and is only 1.31 second, faster than the best RAG approach. Its average metric scores are the lowest in this comparison but as shown in the previous figure \ref{fig:gemini-2.0-flash}, all prompt engineering approaches still outperform most of the average scores of the RAG approach.
 	
 	\begin{figure}[H]
 		\centering
@@ -1065,7 +1084,7 @@
 	
 	Regarding *how Retrieval-Augmented Generation compares with prompt engineering*, results showed that prompt engineering with the LLM gemini-flash-2.0 generated the highest average performance across evaluation metrics. However, it required passing the full context (equivalent to roughly 27,000 tokens or more) for each query, resulting in high cost. On the other hand, the best RAG configuration achieved slightly lower but still strong performance. However, it was passing only approximately 2.250 tokens per query, leading to a much more cost efficient solution. Therefore, for real-time application like live-streaming chatbot, RAG is a more sustainable approach than prompt engineering. Especially under high user load and longer source content.
 	
-	Finally, to answer *what are effective methods to evaluate and compare the performance of RAG and prompt engineering*, the thesis used RAGAS metrics: Answer Correctness, Answer Relevancy, Semantic Similarity, Context Precision, Context Recall, and Faithfulness for RAG approach. For prompt engineering were used only Answer Correctness, Answer Relevancy and Semantic Similarity metrics because there is no context retrieval part to be evaluated. Additionally , these metrics were supported by average response time measurements. The combination of these metrics gave a detailed way to compare different LLM-based chatbot methods for live-streaming environments. The visualizations used — radar plots, heatmaps, and grouped bar charts. These enabled to interpret the comparisons across configurations.
+	Finally, to answer *what are effective methods to evaluate and compare the performance of RAG and prompt engineering*, the thesis used RAGAS metrics: Answer Correctness, Answer Relevancy, Semantic Similarity, Context Precision, Context Recall, and Faithfulness for RAG approach. For prompt engineering were used only Answer Correctness, Answer Relevancy and Semantic Similarity metrics because there is no context retrieval part to be evaluated. Additionally, these metrics were supported by average response time measurements. The combination of these metrics gave a detailed way to compare different LLM-based chatbot methods for live-streaming environments. The visualizations used — radar plots, heatmaps, and grouped bar charts. These enabled to interpret the comparisons across configurations.
 	
 	In conclusion, both RAG and prompt engineering are good techniques for building LLM-based chatbots for live-stream content. However, RAG with optimized hyperparameters shows to be more scalable and cost effective solution for real-time responsiveness. Especially in scenarios with large or continuously growing content.
 	
@@ -1184,22 +1203,6 @@
 			\captionsetup{list=no} 
 			\caption{Heatmap of answer correlation by embedding model, topK and chunk size configurations.}
 			\label{fig:heatmap_ans_corr}
-		\end{figure}
-			
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.8\textwidth]{figures/rag_vs_pe_gpt_4.1_nano.png} 
-			\captionsetup{list=no} 
-			\caption{Comparison of Common Evaluation Metrics and average response generation times with LLM: gpt-4.1-nano between best RAG configuration and Prompt engineering approaches}
-			\label{fig:_gpt_4.1_nano}
-		\end{figure}
-		
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.8\textwidth]{figures/rag_vs_pe_gemini_1.5-pro.png}
-			\captionsetup{list=no} 
-			\caption{Comparison of Common Evaluation Metrics and average response generation times with LLM: gemini-1.5-pro between best RAG configuration and Prompt engineering approaches}
-			\label{fig:gemini_1.5-pro}
 		\end{figure}
 		
 	\end{appendices}

@@ -1,9 +1,10 @@
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{Abstract}{i}{section*.1}%
-\contentsline {chapter}{Acknowledgements}{iii}{section*.4}%
-\contentsline {chapter}{Table of Contents}{iv}{section*.5}%
-\contentsline {chapter}{List of Tables}{vi}{section*.6}%
-\contentsline {chapter}{List of Figures}{vi}{section*.7}%
+\contentsline {chapter}{Declaration of honour}{iii}{section*.2}%
+\contentsline {chapter}{Abstract}{iv}{section*.3}%
+\contentsline {chapter}{Acknowledgements}{vii}{section*.6}%
+\contentsline {chapter}{Table of Contents}{viii}{section*.7}%
+\contentsline {chapter}{List of Tables}{x}{section*.8}%
+\contentsline {chapter}{List of Figures}{x}{section*.9}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Research Questions}{2}{section.1.2}%
@@ -47,11 +48,11 @@
 \contentsline {chapter}{\numberline {5}Results}{41}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Best RAG Parameters}{41}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Prompt engineering versus RAG Comparison Through Different LLMs}{45}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Efficiency and Cost}{49}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Summary}{51}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusion}{51}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Discussion}{52}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Limitations}{53}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Future Improvements}{53}{subsection.6.2.2}%
-\contentsline {chapter}{Bibliography}{55}{subsection.6.2.2}%
-\contentsline {chapter}{Appendix \numberline {A}Additional Comparison Visualizations}{59}{appendix.a.A}%
+\contentsline {section}{\numberline {5.3}Efficiency and Cost}{51}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Summary}{53}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusion}{53}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Discussion}{54}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Limitations}{55}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Future Improvements}{55}{subsection.6.2.2}%
+\contentsline {chapter}{Bibliography}{57}{subsection.6.2.2}%
+\contentsline {chapter}{Appendix \numberline {A}Additional Comparison Visualizations}{61}{appendix.a.A}%
